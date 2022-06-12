@@ -5,8 +5,15 @@ header{
     display: flex;
     align-items: center;
     justify-content: center;
+    position: relative;
     picture img{
         width: 165px;
         padding-top: 13px;
+    }
+    .fa-arrow-left{
+        position: absolute;
+        left: 6.4%;
+        top:50%;
+        transform: translateY(-50%);
     }
 }

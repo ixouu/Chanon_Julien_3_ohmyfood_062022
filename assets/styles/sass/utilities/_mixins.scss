@@ -1,0 +1,40 @@
+@mixin courseTitle{
+    text-transform: uppercase;
+    font-weight: 400;
+    font-size: 1rem;
+    margin-bottom: 25px;
+    position: relative;
+    &::before{
+        content: '';
+        height: 3px;
+        width: 40px;
+        background-color: $colorThrid;
+        position: absolute;
+        bottom: -10px;
+    }
+}
+@mixin mainButtons{
+    font-size: 1.1rem;
+    width: 220px;
+    height: 50px;
+    border: none;
+    border-radius: 50px;
+    background: linear-gradient(175deg, #FF79DA, #9356DC);
+    box-shadow: $boxShadow;
+    transition: all .2s ease-out;
+    color: $fontSizeTitle;
+    a{
+        color: $fontColorBtn;
+        text-decoration: none;
+    }
+    &:hover{
+        box-shadow: $boxShadowHover;
+    }
+}
+
+@mixin coursesAnimation{
+    width: 0%;
+    height: auto;
+    animation: showCourses .4s ease-out forwards 1;
+    opacity: 0;
+}
