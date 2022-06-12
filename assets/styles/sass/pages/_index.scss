@@ -1,0 +1,282 @@
+//loader
+.wrapper {
+    display: flex;
+    flex-direction: row;
+    width: 200vw;
+    height: 100%;
+    overflow-x: hidden;
+
+    .loader {
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        animation: hide 0.2s ease-out forwards 1;
+        animation-delay: 3s;
+        position: relative;
+        background-color: $backgroundColorDarker;
+    }
+
+    circle {
+        fill: none;
+        stroke: #9356dc;
+        stroke-width: 10px;
+        stroke-dasharray: 100 100;
+        stroke-dashoffset: 70;
+        animation: spine 3s ease-in-out forwards 1;
+    }
+    #spinner {
+        transform: translateX(-50px);
+        filter: drop-shadow(50px 0 #ff79da);
+        position: absolute;
+        top: 45%;
+        left: 45%;
+        transform: translate(-50%, -50%);
+        animation: hide 0.2s ease forwards 1;
+        animation-delay: 3s;
+    }
+
+    .indexContent {
+        width: 100vw;
+        height: 100%;
+        transition: all ease-out;
+
+        .location {
+            height: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: $backgroundColor;
+            .location--currentLocation {
+                padding: 0 28px 0 15px;
+                font-weight: 700;
+            }
+        }
+
+        .explore {
+            height: 280px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 5% 8% 6% 8%;
+            background-color: $backgroundColorDarker;
+            h1 {
+                font-size: $fontSizeTitle;
+                text-align: center;
+                padding: 0 5% 3% 5%;
+            }
+            h2 {
+                font-weight: 400;
+                font-size: 1.1rem;
+                text-align: center;
+                padding-bottom: 4%;
+            }
+            .explore--button {
+                font-size: 1.1rem;
+                width: 220px;
+                height: 50px;
+                border: none;
+                border-radius: 50px;
+                background: linear-gradient(175deg, #FF79DA, #9356DC);
+                box-shadow: $boxShadow;
+                transition: all .2s ease-out;
+                a{
+                    color: $fontColorBtn;
+                    text-decoration: none;
+                }
+                &:hover{
+                    box-shadow: $boxShadowHover;
+                }
+            }
+        }
+        .operation {
+            padding: 6% 5% 6% 5%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            .operation--title {
+                font-size: $fontSizeTitle;
+                padding-top: 10%;
+            }
+            .operation--buttons {
+                min-height: 320px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: space-evenly;
+            }
+            .operation--button {
+                width: 325px;
+                height: 75px;
+                box-shadow: $boxShadow;
+                display: flex;
+                position: relative;
+                align-items: center;
+                border-radius: 50px;
+                transition: all .2s ease-out;
+                background-color: $backgroundColorDarker ;
+                .operation--button__content{
+                    text-align: center;
+                    display: block;
+                    width: 100%;
+                    font-weight: 700;
+
+                }
+                .fa-solid{
+                    position: absolute;
+                    left: 12.5%;
+                    top: 50%;
+                    transform: translateY(-50%);
+                }
+                .operation--button__number{
+                    position: absolute;
+                    width: 25px;
+                    height: 25px;
+                    top:50%;
+                    transform: translateY(-50%);
+                    left: -10px;
+                    border-radius: 50%;
+                    background-color: $colorPrimary;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    color: $fontColorBtn;
+                    font-size: .6rem;
+                }
+                &:hover{
+                    box-shadow: $boxShadowHover;
+                    background-color: $colorPrimaryLighter;
+                    .fa-solid{
+                        color: $colorPrimary;
+                        box-shadow: none;
+                    }
+                }
+            }
+        }
+        #restaurants {
+            padding: 6% 5% 6% 5%;
+            height: 1225px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            background-color: $backgroundColorDarker;
+            .restaurants--title {
+                font-size: $fontSizeTitle;
+                padding: 15% 0 2% 0;
+            }
+            .restaurants--cards {
+                height: 1205px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: space-evenly;
+            }
+            .restaurant--card {
+                width: 335px;
+                height: 250px;
+                display: flex;
+                flex-direction: column;
+                margin: 1.5% 0;
+                position: relative;
+                border-radius: 30px;
+                box-shadow: $boxShadow;
+                transition: all .2s ease-out;
+                &:hover{
+                    box-shadow: $boxShadowHover;
+                }
+                .restaurant--card__img{
+                    width: 100%;
+                    min-width: 335px;
+                    height: 68%;
+                    border-radius: 15px 15px 0 0;
+                    object-fit: cover;
+                }
+                .restaurant--card__content{
+                    height: 32%;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    position: relative;
+                    padding: 17px 0 17px 4%;
+                    background-color: white;
+                    border-radius: 0 0 15px 15px;
+                }
+                h3{
+                    margin: 0;
+                }
+                a{
+                    text-decoration: none;
+                    color: $colorLinks;
+                }
+                .like{
+                    position: absolute;
+                    right: 7.5%;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    fill: #ff79da;
+                    &:hover path{
+                       fill: #9356DC;
+                    }
+                }
+                .restaurant--card__new{
+                    position: absolute;
+                    width: 24%;
+                    height: 12%;
+                    right: 14px;
+                    top: 14px;
+                    border-radius: 5px;
+                    background-color: $colorThrid;
+                    color: $colorThridDarker;
+                    font-weight: 700;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                }
+            }
+        }
+    }
+}
+@keyframes spine {
+    0% {
+        stroke-dasharray: 10 10;
+        stroke-dashoffset: 70;
+        transform: scale(1);
+        opacity: 1;
+    }
+    50% {
+        stroke: #ff79da;
+        transform: scale(0.9);
+        opacity: 1;
+    }
+    60%{
+        opacity: 1;
+    }
+    80%{
+        opacity: 0.8;
+    }
+    100% {
+        stroke-dasharray: 20 20;
+        stroke-dashoffset: -200;
+        transform: scale(1);
+        opacity: 0;
+    }
+}
+@keyframes show {
+    0% {
+        width: 0;
+    }
+
+    100% {
+        width: 100vw;
+    }
+}
+@keyframes hide {
+    0% {
+        width: 100vw;
+    }
+    100% {
+        width: 0;
+    }
+}

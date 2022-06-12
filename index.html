@@ -5,9 +5,117 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Onmyfood - Commande de repas en ligne</title>
+    <!--CSS Link-->
     <link rel="stylesheet" href="./assets/styles/style.css">
+    <!--Icons-->
+    <script src="https://kit.fontawesome.com/8675312190.js" crossorigin="anonymous"></script>
 </head>
 <body>
-
+    <div class="wrapper">
+    <!-- Loader -->
+    <div class="loader">
+        <svg id="spinner" width="150" height="150">
+            <circle cx="75" cy="75" r="65"/>
+        </svg>
+    </div>
+    <div class="indexContent">
+        <!-- Header -->
+        <header>
+            <div class="header--logo">
+            <picture>
+                <source media="(max-width: 599px)" srcset="assets/images/logo/ohmyfood.png">
+                <source media="(min-width: 600px)" srcset="assets/images/logo/ohmyfood@2x.svg">
+                <img src="assets/images/logo/ohmyfood@2x.svg" alt="Logo ohmyfood">
+            </picture>
+            </div>
+        </header>
+        <!-- Location -->
+        <div class="location">
+            <i class="fa-solid fa-location-dot"></i>
+            <p class="location--currentLocation">Paris, Belleville</p>
+        </div>
+        <!-- Explore -->
+        <div class="explore">
+            <h1>Réservez le menu qui vous convient</h1>
+            <h2 class="explore--subTitle">Découvrez des restaurants d'exception, séléctionnés par nos soins.</h2>
+            <button class="explore--button"><a href="#restaurants">Explorer nos restaurants</a></button>   
+        </div>
+        <!-- Operation -->
+        <div class="operation">
+            <h4 class='operation--title'>Fonctionnement</h4>
+            <div class="operation--buttons">
+                <div class="operation--button operation--button__1">
+                    <div class="operation--button__number"><span>1</span></div>
+                    <i class="fa-solid fa-mobile-screen"></i>
+                    <p class="operation--button__content">Choisissez un restaurant</p>
+                </div>
+                <div class="operation--button operation--button__2">
+                    <div class="operation--button__number"><span>2</span></div>
+                    <i class="fa-solid fa-list-ul"></i>
+                    <p class="operation--button__content">Composez votre menu</p>
+                </div>
+                <div class="operation--button operation--button__3">
+                <div class="operation--button__number"><span>3</span></div>
+                <i class="fa-solid fa-store"></i>
+                <p class="operation--button__content">Dégustez au restaurant</p>
+                </div>
+            </div>
+        </div>
+        <!-- Restaurants -->
+        <div id="restaurants">
+            <h4 class="restaurants--title">Restaurants</h4>
+            <div class="restaurants--cards">
+                <div class="restaurant--card restaurant--card__1">
+                    <img src="./assets/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="Photo du restaurant La palette du goût" class="restaurant--card__img">
+                    <div class="restaurant--card__new">
+                        <span>Nouveau</span>
+                    </div>
+                    <div class="restaurant--card__content">
+                        <h3><a href="./html/menu-la_palette_du_gout.html">La palette du goût</a></h3>
+                        <span>Ménilmontant</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="20px" height='25px' class="like"><!--! Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path fill='#000000' d="M244 84L255.1 96L267.1 84.02C300.6 51.37 347 36.51 392.6 44.1C461.5 55.58 512 115.2 512 185.1V190.9C512 232.4 494.8 272.1 464.4 300.4L283.7 469.1C276.2 476.1 266.3 480 256 480C245.7 480 235.8 476.1 228.3 469.1L47.59 300.4C17.23 272.1 0 232.4 0 190.9V185.1C0 115.2 50.52 55.58 119.4 44.1C164.1 36.51 211.4 51.37 244 84C243.1 84 244 84.01 244 84L244 84zM255.1 163.9L210.1 117.1C188.4 96.28 157.6 86.4 127.3 91.44C81.55 99.07 48 138.7 48 185.1V190.9C48 219.1 59.71 246.1 80.34 265.3L256 429.3L431.7 265.3C452.3 246.1 464 219.1 464 190.9V185.1C464 138.7 430.4 99.07 384.7 91.44C354.4 86.4 323.6 96.28 301.9 117.1L255.1 163.9z"/></svg>
+                    </div>
+                </div>
+                <div class="restaurant--card restaurant--card__2">
+                    <img src="./assets/images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg" alt="Photo du restaurant La note enchantée" class="restaurant--card__img">
+                    <div class="restaurant--card__new">
+                        <span>Nouveau</span>
+                    </div>
+                    <div class="restaurant--card__content">
+                        <h3><a href="./html/menu-la_note_enchantee.html">La note enchantée</a></h3>
+                        <span>Charonne</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="20px" height='25px' class="like"><!--! Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path fill='#000000' d="M244 84L255.1 96L267.1 84.02C300.6 51.37 347 36.51 392.6 44.1C461.5 55.58 512 115.2 512 185.1V190.9C512 232.4 494.8 272.1 464.4 300.4L283.7 469.1C276.2 476.1 266.3 480 256 480C245.7 480 235.8 476.1 228.3 469.1L47.59 300.4C17.23 272.1 0 232.4 0 190.9V185.1C0 115.2 50.52 55.58 119.4 44.1C164.1 36.51 211.4 51.37 244 84C243.1 84 244 84.01 244 84L244 84zM255.1 163.9L210.1 117.1C188.4 96.28 157.6 86.4 127.3 91.44C81.55 99.07 48 138.7 48 185.1V190.9C48 219.1 59.71 246.1 80.34 265.3L256 429.3L431.7 265.3C452.3 246.1 464 219.1 464 190.9V185.1C464 138.7 430.4 99.07 384.7 91.44C354.4 86.4 323.6 96.28 301.9 117.1L255.1 163.9z"/></svg>
+                    </div>
+                </div>
+                <div class="restaurant--card restaurant--card__3">
+                    <img src="./assets/images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg" alt="Photo du restaurant À la française" class="restaurant--card__img">
+                    <div class="restaurant--card__content">
+                        <h3><a href="./html/menu-la_note_enchantee.html">À la française</a></h3>
+                        <span>Cité Rouge</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="20px" height='25px' class="like"><!--! Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path fill='#000000' d="M244 84L255.1 96L267.1 84.02C300.6 51.37 347 36.51 392.6 44.1C461.5 55.58 512 115.2 512 185.1V190.9C512 232.4 494.8 272.1 464.4 300.4L283.7 469.1C276.2 476.1 266.3 480 256 480C245.7 480 235.8 476.1 228.3 469.1L47.59 300.4C17.23 272.1 0 232.4 0 190.9V185.1C0 115.2 50.52 55.58 119.4 44.1C164.1 36.51 211.4 51.37 244 84C243.1 84 244 84.01 244 84L244 84zM255.1 163.9L210.1 117.1C188.4 96.28 157.6 86.4 127.3 91.44C81.55 99.07 48 138.7 48 185.1V190.9C48 219.1 59.71 246.1 80.34 265.3L256 429.3L431.7 265.3C452.3 246.1 464 219.1 464 190.9V185.1C464 138.7 430.4 99.07 384.7 91.44C354.4 86.4 323.6 96.28 301.9 117.1L255.1 163.9z"/></svg>
+                    </div>
+                </div>
+                <div class="restaurant--card restaurant--card__4">
+                    <img src="./assets/images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg" alt="Photo du restaurant Le délice des sens" class="restaurant--card__img">
+                    <div class="restaurant--card__content">
+                        <h3><a href="./html/menu-le_delice_des_sens.html">Le délice des sens</a></h3>
+                        <span>Folie-Méricourt</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="20px" height='25px' class="like"><!--! Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path fill='#000000' d="M244 84L255.1 96L267.1 84.02C300.6 51.37 347 36.51 392.6 44.1C461.5 55.58 512 115.2 512 185.1V190.9C512 232.4 494.8 272.1 464.4 300.4L283.7 469.1C276.2 476.1 266.3 480 256 480C245.7 480 235.8 476.1 228.3 469.1L47.59 300.4C17.23 272.1 0 232.4 0 190.9V185.1C0 115.2 50.52 55.58 119.4 44.1C164.1 36.51 211.4 51.37 244 84C243.1 84 244 84.01 244 84L244 84zM255.1 163.9L210.1 117.1C188.4 96.28 157.6 86.4 127.3 91.44C81.55 99.07 48 138.7 48 185.1V190.9C48 219.1 59.71 246.1 80.34 265.3L256 429.3L431.7 265.3C452.3 246.1 464 219.1 464 190.9V185.1C464 138.7 430.4 99.07 384.7 91.44C354.4 86.4 323.6 96.28 301.9 117.1L255.1 163.9z"/></svg>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Footer -->
+        <footer>
+            <p class="footer--title">ohmyfood</p>
+            <div class="footer--section">
+                <a href="#" class="utensils">Proposer un restaurant</a>
+                <a href="#" class="handshake">Devenir partenaire</a>
+                <a href="#">Mentions légales</a>
+                <a href="#">Contact</a>
+            </div>
+        </footer>
+    </div>
+</div>
 </body>
-</html>
+ </html>

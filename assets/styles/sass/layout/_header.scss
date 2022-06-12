@@ -1,0 +1,12 @@
+header{
+    height: 63px;
+    width: 100%;
+    box-shadow: $boxShadow;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    picture img{
+        width: 165px;
+        padding-top: 13px;
+    }
+}

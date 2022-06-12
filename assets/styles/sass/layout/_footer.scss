@@ -1,0 +1,42 @@
+footer{
+    height: 220px;
+    background-color: $footerColor;
+    padding: 0 6%;
+    color: white;
+    .footer--title{
+        font-family: $fontShrikhand;
+        display: block;
+        padding: 25px 0;
+        font-size: 1.2rem;
+        margin: 0;
+    }
+    .footer--section{
+        height: 100px;
+        display: flex;
+        flex-direction: column;
+        justify-items: space-between;
+        a{
+            color: white;
+            text-decoration: none;
+            padding: 7px 0;
+        }
+        .utensils::before{
+            content: '';
+            width: 15px;
+            height: 15px;
+            display: inline-block;
+            margin-right: 15px;
+            background-image: url(../images/svg/utensils.svg);
+            background-size: 15px 15px;
+        }
+        .handshake::before{
+            content: '';
+            width: 15px;
+            height: 15px;
+            display: inline-block;
+            margin-right: 15px;
+            background-image: url(../images/svg/handshake.svg);
+            background-size: 15px 15px;
+        }
+    }
+}
