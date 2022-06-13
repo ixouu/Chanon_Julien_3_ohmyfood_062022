@@ -100,6 +100,12 @@ header .fa-arrow-left {
   background-position: top;
 }
 
+.mainPicture--leDelicedesSens {
+  background-image: url(../images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg);
+  background-size: 375px 275px;
+  background-position: top;
+}
+
 .mainContent {
   background-color: #F6F6F6;
   padding: 30px 4% 80px 5%;
@@ -198,6 +204,10 @@ header .fa-arrow-left {
 .course:hover .course--details {
   width: 43%;
 }
+.course:hover .course--details__title, .course .course--details__subtitle {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
 .course .course--details {
   display: flex;
   flex-direction: column;
@@ -207,9 +217,7 @@ header .fa-arrow-left {
   width: 80%;
 }
 .course .course--details__title, .course .course--details__subtitle {
-  white-space: nowrap;
   overflow: hidden;
-  text-overflow: ellipsis;
 }
 .course .title {
   font-weight: 700;
