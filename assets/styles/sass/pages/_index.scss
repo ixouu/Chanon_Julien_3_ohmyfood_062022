@@ -74,21 +74,7 @@
                 padding-bottom: 4%;
             }
             .explore--button {
-                font-size: 1.1rem;
-                width: 220px;
-                height: 50px;
-                border: none;
-                border-radius: 50px;
-                background: linear-gradient(175deg, #FF79DA, #9356DC);
-                box-shadow: $boxShadow;
-                transition: all .2s ease-out;
-                a{
-                    color: $fontColorBtn;
-                    text-decoration: none;
-                }
-                &:hover{
-                    box-shadow: $boxShadowHover;
-                }
+                @include mainButtons
             }
         }
         .operation {

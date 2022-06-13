@@ -22,7 +22,9 @@
     background: linear-gradient(175deg, #FF79DA, #9356DC);
     box-shadow: $boxShadow;
     transition: all .2s ease-out;
-    color: $fontSizeTitle;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     a{
         color: $fontColorBtn;
         text-decoration: none;

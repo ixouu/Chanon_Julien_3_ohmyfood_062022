@@ -1,5 +1,6 @@
 footer{
-    height: 220px;
+    width: 100%;
+    min-height: 195px;
     background-color: $footerColor;
     padding: 0 6%;
     color: white;
@@ -11,14 +12,13 @@ footer{
         margin: 0;
     }
     .footer--section{
-        height: 100px;
         display: flex;
+        justify-content: flex-start;
         flex-direction: column;
-        justify-items: space-between;
         a{
             color: white;
             text-decoration: none;
-            padding: 7px 0;
+            padding:0 0 14px 0;
         }
         .utensils::before{
             content: '';
@@ -38,6 +38,9 @@ footer{
             background-image: url(../images/svg/handshake.svg);
             background-size: 15px 15px;
             transform: rotate(-45deg);
+        }
+        &:last-child{
+            padding-bottom: 34px;
         }
     }
 }
