@@ -1,4 +1,3 @@
-@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
 footer {
@@ -63,6 +62,7 @@ header .fa-arrow-left {
   left: 6.4%;
   top: 50%;
   transform: translateY(-50%);
+  color: #000000;
 }
 
 .wrapper--menu {
@@ -72,11 +72,26 @@ header .fa-arrow-left {
   flex-direction: column;
 }
 
-.mainPicture img {
-  width: 110%;
+.mainPicture {
   object-fit: contain;
+  width: 375px;
+  height: 375px;
   position: absolute;
   z-index: 1000;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.mainPicture--aLaFrancaise {
+  background-image: url(../images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg);
+  background-size: 375px 275px;
+  background-position: top;
+}
+
+.mainPicture--laNoteEnchantee {
+  background-image: url(../images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg);
+  background-position: bottom;
+  background-size: cover;
 }
 
 .mainContent {
@@ -566,7 +581,6 @@ body {
   margin: 0;
   padding: 0;
   font-family: "Roboto", sans-serif;
-  background: linear-gradient(to top, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url(../../../html/Menu\ -\ A╠Ç\ la\ franc╠ºaise.png) top center no-repeat;
 }
 body h1,
 body h2,
