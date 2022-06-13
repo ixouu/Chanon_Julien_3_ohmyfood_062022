@@ -1,0 +1,167 @@
+.wrapper--menu{
+    position: relative;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+}
+.mainPicture img{
+    width: 110%;
+    object-fit: contain;
+    position: absolute;
+    z-index: 1000;
+}
+.mainContent{
+ background-color: $backgroundColorDarker;
+    padding: 30px 4% 80px 5%;
+    border-radius: 45px 45px 0 0;
+    margin-top: 220px;
+    z-index: 2000;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    
+}
+.mainContent--title{  
+    width: 100%;  
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+     h1{
+    font-family: $fontShrikhand;
+    font-size: 1.8rem;
+    letter-spacing: -0.7px;
+    }
+    .like{
+        margin-right: 20px;
+        width: 30px;
+        height: 30px;
+    }
+}
+
+.mainContent--starters, .mainContent--mains, .mainContent--desserts{
+    margin: 0 0 2.7vh 0;
+    h4{
+        @include courseTitle
+    }
+}
+.mainContent--starters{
+    margin-top: 4vh;
+}
+.mainContent--starters .course{
+   @include coursesAnimation;
+}
+.mainContent--mains .course{
+    @include coursesAnimation;
+    animation-delay: .2s;
+ }
+ .mainContent--desserts .course{
+    @include coursesAnimation;
+    animation-delay: .3s;
+ }
+.course{
+    width: 100%;
+    height: 68px;
+    background-color: #FFFFFF;
+    margin: 1.8vh 0;
+    display: flex;
+    align-items: space-between;
+    border-radius: 15px;
+    cursor: pointer;
+    box-shadow: $boxShadow;
+    &:hover{
+        box-shadow: $boxShadowHover;
+    }
+    &:hover .fa-circle-check{
+        animation: iconRotate .4s;
+        opacity: 1;
+    }
+    &:hover .course--added{
+        width: 60px;
+    }
+    &:hover .course--details {
+        width: 43%;
+    }
+
+    .course--details{
+        display: flex;
+        flex-direction:column;
+        justify-content: space-between;
+        padding: 10px 0 15px 10px;
+        transition : .3s;
+        width: 80%;
+    }
+    .course--details__title, .course--details__subtitle{
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+    .title{
+        font-weight: 700;
+        font-size: 1.1rem;
+    }
+    .subtitle{
+        font-size: .9rem;
+    }
+    .course--price{
+        margin-left: auto;
+        display:flex;
+        align-items: flex-end;
+    }
+    .price{
+        padding: 0 20px 12px 0;
+        font-weight: 700;
+    }
+    .course--added{
+        width: 0;
+        height: 68px;
+        border-radius: 0 15px 15px 0;
+        background-color: $colorThrid;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition : .3s;
+    }
+    .fa-circle-check{
+        color: white;
+        width: 20px;
+        opacity: 0;
+    }
+}
+.mainContent--button{
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .button--order{
+        @include mainButtons;
+        width: 185px;
+    }
+}
+
+@keyframes iconRotate{
+    0%{
+        transform: rotate(0);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+@keyframes showCourses{
+    0%{
+        opacity: 0;
+    }
+    50%{
+        opacity: .5;
+    }
+    70%{
+        opacity: .7;
+    }
+    90%{
+        opacity: .9;
+    }
+    100%{
+        width: 100%;
+        transform: none;
+        opacity: 1;
+    }
+}
