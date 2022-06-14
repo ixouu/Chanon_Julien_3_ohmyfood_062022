@@ -22,6 +22,7 @@
     }
     &:hover{
         box-shadow: $boxShadowHover;
+        filter:brightness(1.1);
     }
     @include tablettes-only{
         width: 340px;

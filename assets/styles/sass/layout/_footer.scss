@@ -74,10 +74,10 @@ footer{
             }
         }
         .utensils::before{
-            background-image: url(../images/svg/utensils.svg);
+            background-image: url(../../../assets/images/svg/utensils.svg);
         }
         .handshake::before{
-            background-image: url(../images/svg/handshake.svg);
+            background-image: url(../../../assets/images/svg/handshake.svg);
             transform: rotate(-45deg);
         }
         &:last-child{

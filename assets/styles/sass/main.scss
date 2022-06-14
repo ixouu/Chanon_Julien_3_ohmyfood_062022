@@ -1,3 +1,11 @@
+@import './utilities/fonts';
+@import './utilities/variables';
+@import './utilities/mixins';
+@import './layout/footer';
+@import './layout/header';
+@import './pages/menu';
+@import './pages/index';
+
 *,
 *::before,
 *::after {

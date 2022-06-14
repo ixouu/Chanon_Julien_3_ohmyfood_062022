@@ -21,25 +21,40 @@
 }
 
 .mainPicture--aLaFrancaise{
-    background-image: url(../images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg);
+    background-image: url(../../../assets/images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg);
     background-size: 100vw auto;
     background-position: top;
+    background-size: cover;
+    @include desktop-only{
+        background-position: -50%;
+    }
 } 
 .mainPicture--laNoteEnchantee{
-    background-image: url(../images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg);
+    background-image: url(../../../assets/images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg);
     background-position: bottom;
     background-size: 100vw  auto;
     background-size: cover;
+    @include desktop-only{
+        background-position: -50%;
+    }
 }
 .mainPicture--laPaletteDuGout{
-    background-image: url(../images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg);
+    background-image: url(../../../assets/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg);
     background-size: 100vw auto;
     background-position: top;
+    background-size: cover;
+    @include desktop-only{
+        background-position: -50%;
+    }
 }
 .mainPicture--leDelicedesSens{
-    background-image: url(../images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg);
+    background-image: url(../../../assets/images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg);
     background-size: 100vw auto;
     background-position: top;
+    background-size: cover;
+    @include desktop-only{
+        background-position: -50%;
+    }
 }
 .mainContent{
  background-color: $backgroundColorDarker;
@@ -75,10 +90,12 @@
     @include tablettes-only{
         font-size: 2.4rem;
         padding-left: 25%;
+        letter-spacing: 0;
     }
     @include desktop-only{
         font-size: 3rem;
         padding-left: 25%;
+        letter-spacing: 0;
     }
     }
     .like{
