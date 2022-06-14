@@ -18,3 +18,10 @@ $fontRoboto : 'Roboto', sans-serif;
 $fontShrikhand : 'Shrikhand', sans-serif;
 $fontSizeTitle : 1.5rem;
 $fontColorBtn : #FFFFFF;
+
+//media querries
+$breakpoints: (
+  mobile: 599px,
+  tablettes : 900px,
+  desktop : 1200px
+);

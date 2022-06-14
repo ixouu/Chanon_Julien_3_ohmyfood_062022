@@ -14,33 +14,92 @@ footer .footer--title {
   font-size: 1.2rem;
   margin: 0;
 }
+@media screen and (min-width: 599px) and (max-width: 1200px) {
+  footer .footer--title {
+    font-size: 1.7rem;
+    text-align: center;
+  }
+}
+@media screen and (min-width: 1200px) {
+  footer .footer--title {
+    font-size: 2.4rem;
+    padding: 30px 10%;
+    text-align: center;
+  }
+}
 footer .footer--section {
   display: flex;
   justify-content: flex-start;
   flex-direction: column;
 }
+@media screen and (min-width: 599px) and (max-width: 1200px) {
+  footer .footer--section {
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+}
+@media screen and (min-width: 1200px) {
+  footer .footer--section {
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+}
 footer .footer--section a {
   color: white;
   text-decoration: none;
   padding: 0 0 14px 0;
+  position: relative;
+}
+@media screen and (min-width: 599px) and (max-width: 1200px) {
+  footer .footer--section a {
+    font-size: 1rem;
+    padding: 3% 5%;
+  }
+}
+@media screen and (min-width: 1200px) {
+  footer .footer--section a {
+    font-size: 1.2rem;
+    padding: 3% 5%;
+  }
+}
+footer .footer--section a.utensils, footer .footer--section a.handshake {
+  padding-left: 27px;
+}
+@media screen and (min-width: 1200px) {
+  footer .footer--section a.utensils, footer .footer--section a.handshake {
+    padding-left: 45px;
+  }
+}
+footer .footer--section .utensils::before, footer .footer--section .handshake::before {
+  content: "";
+  width: 15px;
+  height: 15px;
+  display: inline-block;
+  background-size: 15px 15px;
+  position: absolute;
+  left: 0;
+}
+@media screen and (min-width: 599px) and (max-width: 1200px) {
+  footer .footer--section .utensils::before, footer .footer--section .handshake::before {
+    width: 20px;
+    height: 20px;
+    background-size: 20px 20px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  footer .footer--section .utensils::before, footer .footer--section .handshake::before {
+    width: 30px;
+    height: 30px;
+    background-size: 30px 30px;
+  }
 }
 footer .footer--section .utensils::before {
-  content: "";
-  width: 15px;
-  height: 15px;
-  display: inline-block;
-  margin-right: 15px;
   background-image: url(../images/svg/utensils.svg);
-  background-size: 15px 15px;
 }
 footer .footer--section .handshake::before {
-  content: "";
-  width: 15px;
-  height: 15px;
-  display: inline-block;
-  margin-right: 15px;
   background-image: url(../images/svg/handshake.svg);
-  background-size: 15px 15px;
   transform: rotate(-45deg);
 }
 footer .footer--section:last-child {
@@ -67,6 +126,16 @@ header .fa-arrow-left {
   transform: translateY(-50%);
   color: #000000;
 }
+@media screen and (min-width: 599px) and (max-width: 1200px) {
+  header {
+    height: 80px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  header {
+    height: 100px;
+  }
+}
 
 .wrapper--menu {
   position: relative;
@@ -83,6 +152,16 @@ header .fa-arrow-left {
   z-index: 1000;
   background-position: center;
   background-repeat: no-repeat;
+}
+@media screen and (min-width: 599px) and (max-width: 1200px) {
+  .mainPicture {
+    height: 80vh;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .mainPicture {
+    height: 100vh;
+  }
 }
 
 .mainPicture--aLaFrancaise {
@@ -120,6 +199,22 @@ header .fa-arrow-left {
   flex-direction: column;
   justify-content: space-evenly;
 }
+@media screen and (min-width: 599px) and (max-width: 1200px) {
+  .mainContent {
+    margin-top: 40vh;
+    padding: 30px 0 80px 0;
+    align-items: center;
+    justify-content: center;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .mainContent {
+    margin-top: 75vh;
+    padding: 30px 0 80px 0;
+    align-items: center;
+    justify-content: center;
+  }
+}
 
 .mainContent--title {
   width: 100%;
@@ -132,10 +227,34 @@ header .fa-arrow-left {
   font-size: 1.8rem;
   letter-spacing: -0.7px;
 }
+@media screen and (min-width: 599px) and (max-width: 1200px) {
+  .mainContent--title h1 {
+    font-size: 2.4rem;
+    padding-left: 25%;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .mainContent--title h1 {
+    font-size: 3rem;
+    padding-left: 25%;
+  }
+}
 .mainContent--title .like {
   margin-right: 20px;
   width: 30px;
   height: 30px;
+}
+@media screen and (min-width: 599px) and (max-width: 1200px) {
+  .mainContent--title .like {
+    margin-right: 40px;
+    width: 40px;
+    height: 40px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .mainContent--title .like {
+    margin-right: 60px;
+  }
 }
 
 .mainContent--starters, .mainContent--mains, .mainContent--desserts {
@@ -155,6 +274,21 @@ header .fa-arrow-left {
   background-color: #99E2D0;
   position: absolute;
   bottom: -7px;
+}
+@media screen and (min-width: 599px) and (max-width: 1200px) {
+  .mainContent--starters h4::before, .mainContent--mains h4::before, .mainContent--desserts h4::before {
+    width: 60px;
+  }
+}
+@media screen and (min-width: 599px) and (max-width: 1200px) {
+  .mainContent--starters h4, .mainContent--mains h4, .mainContent--desserts h4 {
+    font-size: 1.2rem;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .mainContent--starters h4, .mainContent--mains h4, .mainContent--desserts h4 {
+    font-size: 1.4rem;
+  }
 }
 
 .mainContent--starters {
@@ -184,6 +318,17 @@ header .fa-arrow-left {
   animation-delay: 0.3s;
 }
 
+@media screen and (min-width: 599px) and (max-width: 1200px) {
+  .mainContent--starters, .mainContent--mains, .mainContent--desserts {
+    width: 80vw;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .mainContent--starters, .mainContent--mains, .mainContent--desserts {
+    width: 60vw;
+  }
+}
+
 .course {
   width: 100%;
   height: 68px;
@@ -204,8 +349,28 @@ header .fa-arrow-left {
 .course:hover .course--added {
   width: 60px;
 }
+@media screen and (min-width: 599px) and (max-width: 1200px) {
+  .course:hover .course--added {
+    width: 80px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .course:hover .course--added {
+    width: 100px;
+  }
+}
 .course:hover .course--details {
   width: 43%;
+}
+@media screen and (min-width: 599px) and (max-width: 1200px) {
+  .course:hover .course--details {
+    width: 80%;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .course:hover .course--details {
+    width: 80%;
+  }
 }
 .course .course--details {
   display: flex;
@@ -213,6 +378,18 @@ header .fa-arrow-left {
   padding: 10px 0 15px 10px;
   transition: 0.3s;
   width: 80%;
+}
+@media screen and (min-width: 599px) and (max-width: 1200px) {
+  .course .course--details {
+    justify-content: center;
+    padding: 0 0 0 15px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .course .course--details {
+    justify-content: center;
+    padding: 0 0 0 25px;
+  }
 }
 .course .course--details__title, .course .course--details__subtitle {
   overflow: hidden;
@@ -223,8 +400,28 @@ header .fa-arrow-left {
   font-weight: 700;
   font-size: 1.1rem;
 }
+@media screen and (min-width: 599px) and (max-width: 1200px) {
+  .course .title {
+    font-size: 1.3rem;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .course .title {
+    font-size: 1.5rem;
+  }
+}
 .course .subtitle {
   font-size: 0.9rem;
+}
+@media screen and (min-width: 599px) and (max-width: 1200px) {
+  .course .subtitle {
+    font-size: 1.1rem;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .course .subtitle {
+    font-size: 1.3rem;
+  }
 }
 .course .course--price {
   margin-left: auto;
@@ -234,6 +431,18 @@ header .fa-arrow-left {
 .course .price {
   padding: 0 20px 12px 0;
   font-weight: 700;
+}
+@media screen and (min-width: 599px) and (max-width: 1200px) {
+  .course .price {
+    font-size: 1.2rem;
+    padding: 0 20px 20px 0;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .course .price {
+    font-size: 1.4rem;
+    padding: 0 30px 30px 0;
+  }
 }
 .course .course--added {
   width: 0;
@@ -245,10 +454,25 @@ header .fa-arrow-left {
   justify-content: center;
   transition: 0.3s;
 }
+@media screen and (min-width: 599px) and (max-width: 1200px) {
+  .course .course--added {
+    height: 80px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .course .course--added {
+    height: 100px;
+  }
+}
 .course .fa-circle-check {
   color: white;
   width: 20px;
   opacity: 0;
+}
+@media screen and (min-width: 1200px) {
+  .course {
+    margin: 2vh 0;
+  }
 }
 
 .mainContent--button {
@@ -275,8 +499,30 @@ header .fa-arrow-left {
   color: #FFFFFF;
   text-decoration: none;
 }
+@media screen and (min-width: 599px) and (max-width: 1200px) {
+  .mainContent--button .button--order a {
+    font-size: 1.4rem;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .mainContent--button .button--order a {
+    font-size: 1.6rem;
+  }
+}
 .mainContent--button .button--order:hover {
   box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.4);
+}
+@media screen and (min-width: 599px) and (max-width: 1200px) {
+  .mainContent--button .button--order {
+    width: 340px;
+    height: 75px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .mainContent--button .button--order {
+    width: 420px;
+    height: 80px;
+  }
 }
 
 @keyframes iconRotate {
@@ -347,18 +593,38 @@ header .fa-arrow-left {
   height: 100%;
   transition: all ease-out;
 }
-.wrapper .indexContent .location {
+
+@media screen and (min-width: 599px) and (max-width: 1200px) {
+  header {
+    height: 80px;
+  }
+}
+
+.location {
   height: 50px;
   display: flex;
   justify-content: center;
   align-items: center;
   background-color: #EAEAEA;
 }
-.wrapper .indexContent .location .location--currentLocation {
+.location .location--currentLocation {
   padding: 0 28px 0 15px;
   font-weight: 700;
 }
-.wrapper .indexContent .explore {
+@media screen and (min-width: 599px) and (max-width: 1200px) {
+  .location {
+    height: 80px;
+    font-size: 1.2rem;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .location {
+    height: 100px;
+    font-size: 1.4rem;
+  }
+}
+
+.explore {
   min-height: 280px;
   display: flex;
   flex-direction: column;
@@ -367,18 +633,40 @@ header .fa-arrow-left {
   padding: 5% 8% 6% 8%;
   background-color: #F6F6F6;
 }
-.wrapper .indexContent .explore h1 {
+.explore h1 {
   font-size: 1.5rem;
   text-align: center;
   padding: 0 5% 3% 5%;
 }
-.wrapper .indexContent .explore h2 {
+@media screen and (min-width: 599px) and (max-width: 1200px) {
+  .explore h1 {
+    font-size: 1.7rem;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .explore h1 {
+    font-size: 2.2rem;
+  }
+}
+.explore h2 {
   font-weight: 400;
   font-size: 1.1rem;
   text-align: center;
   padding-bottom: 4%;
 }
-.wrapper .indexContent .explore .explore--button {
+@media screen and (min-width: 599px) and (max-width: 1200px) {
+  .explore h2 {
+    font-size: 1.2rem;
+    padding: 0 15vw 3% 15vw;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .explore h2 {
+    font-size: 1.4rem;
+    padding: 0 15vw 3% 15vw;
+  }
+}
+.explore .explore--button {
   font-size: 1.1rem;
   width: 220px;
   height: 50px;
@@ -391,31 +679,71 @@ header .fa-arrow-left {
   align-items: center;
   justify-content: center;
 }
-.wrapper .indexContent .explore .explore--button a {
+.explore .explore--button a {
   color: #FFFFFF;
   text-decoration: none;
 }
-.wrapper .indexContent .explore .explore--button:hover {
+@media screen and (min-width: 599px) and (max-width: 1200px) {
+  .explore .explore--button a {
+    font-size: 1.4rem;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .explore .explore--button a {
+    font-size: 1.6rem;
+  }
+}
+.explore .explore--button:hover {
   box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.4);
 }
-.wrapper .indexContent .operation {
+@media screen and (min-width: 599px) and (max-width: 1200px) {
+  .explore .explore--button {
+    width: 340px;
+    height: 75px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .explore .explore--button {
+    width: 420px;
+    height: 80px;
+  }
+}
+
+.operation {
   padding: 6% 5% 6% 5%;
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
-.wrapper .indexContent .operation .operation--title {
+.operation .operation--title {
   font-size: 1.5rem;
   padding-top: 10%;
 }
-.wrapper .indexContent .operation .operation--buttons {
+@media screen and (min-width: 599px) and (max-width: 1200px) {
+  .operation .operation--title {
+    padding-top: 5%;
+    font-size: 1.5rem;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .operation .operation--title {
+    padding-top: 0;
+    font-size: 2rem;
+  }
+}
+@media screen and (min-width: 599px) and (max-width: 1200px) {
+  .operation {
+    justify-content: flex-start;
+  }
+}
+.operation .operation--buttons {
   min-height: 320px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-evenly;
 }
-.wrapper .indexContent .operation .operation--button {
+.operation .operation--button {
   width: 325px;
   height: 75px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
@@ -426,19 +754,52 @@ header .fa-arrow-left {
   transition: all 0.2s ease-out;
   background-color: #F6F6F6;
 }
-.wrapper .indexContent .operation .operation--button .operation--button__content {
+@media screen and (min-width: 599px) and (max-width: 1200px) {
+  .operation .operation--button {
+    height: 80px;
+    width: 500px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .operation .operation--button {
+    width: 700px;
+    height: 100px;
+    margin: 20px 0 20px 0;
+  }
+}
+.operation .operation--button .operation--button__content {
   text-align: center;
   display: block;
   width: 100%;
   font-weight: 700;
 }
-.wrapper .indexContent .operation .operation--button .fa-solid {
+@media screen and (min-width: 599px) and (max-width: 1200px) {
+  .operation .operation--button .operation--button__content {
+    font-size: 1.2rem;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .operation .operation--button .operation--button__content {
+    font-size: 1.5rem;
+  }
+}
+.operation .operation--button .fa-solid {
   position: absolute;
   left: 12.5%;
   top: 50%;
   transform: translateY(-50%);
 }
-.wrapper .indexContent .operation .operation--button .operation--button__number {
+@media screen and (min-width: 599px) and (max-width: 1200px) {
+  .operation .operation--button .fa-solid {
+    left: 20%;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .operation .operation--button .fa-solid {
+    left: 25%;
+  }
+}
+.operation .operation--button .operation--button__number {
   position: absolute;
   width: 25px;
   height: 25px;
@@ -453,15 +814,32 @@ header .fa-arrow-left {
   color: #FFFFFF;
   font-size: 0.6rem;
 }
-.wrapper .indexContent .operation .operation--button:hover {
+@media screen and (min-width: 599px) and (max-width: 1200px) {
+  .operation .operation--button .operation--button__number {
+    width: 40px;
+    height: 40px;
+    font-size: 0.8rem;
+    left: -12.5px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .operation .operation--button .operation--button__number {
+    width: 60px;
+    height: 60px;
+    font-size: 1rem;
+    left: -15px;
+  }
+}
+.operation .operation--button:hover {
   box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.4);
   background-color: rgba(146, 86, 220, 0.1764705882);
 }
-.wrapper .indexContent .operation .operation--button:hover .fa-solid {
+.operation .operation--button:hover .fa-solid {
   color: #9356DC;
   box-shadow: none;
 }
-.wrapper .indexContent #restaurants {
+
+#restaurants {
   padding: 6% 5% 6% 5%;
   min-height: 1225px;
   display: flex;
@@ -469,18 +847,41 @@ header .fa-arrow-left {
   justify-content: center;
   background-color: #F6F6F6;
 }
-.wrapper .indexContent #restaurants .restaurants--title {
+#restaurants .restaurants--title {
   font-size: 1.5rem;
   padding: 15% 0 2% 0;
 }
-.wrapper .indexContent #restaurants .restaurants--cards {
+@media screen and (min-width: 599px) and (max-width: 1200px) {
+  #restaurants .restaurants--title {
+    padding: 7.5% 0 2% 0;
+    font-size: 1.5rem;
+    min-height: 0;
+  }
+}
+@media screen and (min-width: 1200px) {
+  #restaurants .restaurants--title {
+    padding: 0 0 2% 0;
+    font-size: 2rem;
+    justify-content: flex-start;
+    min-height: 0;
+  }
+}
+#restaurants .restaurants--cards {
   min-height: 1205px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-evenly;
 }
-.wrapper .indexContent #restaurants .restaurant--card {
+@media screen and (min-width: 1200px) {
+  #restaurants .restaurants--cards {
+    min-height: 0;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding-bottom: 30px;
+  }
+}
+#restaurants .restaurant--card {
   width: 335px;
   height: 250px;
   display: flex;
@@ -491,17 +892,17 @@ header .fa-arrow-left {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   transition: all 0.2s ease-out;
 }
-.wrapper .indexContent #restaurants .restaurant--card:hover {
+#restaurants .restaurant--card:hover {
   box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.4);
 }
-.wrapper .indexContent #restaurants .restaurant--card .restaurant--card__img {
+#restaurants .restaurant--card .restaurant--card__img {
   width: 100%;
   min-width: 335px;
   height: 68%;
   border-radius: 15px 15px 0 0;
   object-fit: cover;
 }
-.wrapper .indexContent #restaurants .restaurant--card .restaurant--card__content {
+#restaurants .restaurant--card .restaurant--card__content {
   height: 32%;
   display: flex;
   flex-direction: column;
@@ -511,24 +912,40 @@ header .fa-arrow-left {
   background-color: white;
   border-radius: 0 0 15px 15px;
 }
-.wrapper .indexContent #restaurants .restaurant--card h3 {
+@media screen and (min-width: 599px) and (max-width: 1200px) {
+  #restaurants .restaurant--card .restaurant--card__content {
+    font-size: 1.5rem;
+  }
+}
+@media screen and (min-width: 1200px) {
+  #restaurants .restaurant--card .restaurant--card__content {
+    font-size: 1.7rem;
+  }
+}
+#restaurants .restaurant--card h3 {
   margin: 0;
 }
-.wrapper .indexContent #restaurants .restaurant--card a {
+#restaurants .restaurant--card a {
   text-decoration: none;
   color: #000000;
 }
-.wrapper .indexContent #restaurants .restaurant--card .like {
+#restaurants .restaurant--card .like {
   position: absolute;
   right: 7.5%;
   top: 50%;
   transform: translateY(-50%);
   fill: #ff79da;
 }
-.wrapper .indexContent #restaurants .restaurant--card .like:hover path {
+#restaurants .restaurant--card .like:hover path {
   fill: #9356DC;
 }
-.wrapper .indexContent #restaurants .restaurant--card .restaurant--card__new {
+@media screen and (min-width: 599px) and (max-width: 1200px) {
+  #restaurants .restaurant--card .like {
+    width: 40px;
+    height: 30px;
+  }
+}
+#restaurants .restaurant--card .restaurant--card__new {
   position: absolute;
   width: 24%;
   height: 12%;
@@ -541,6 +958,24 @@ header .fa-arrow-left {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+@media screen and (min-width: 599px) and (max-width: 1200px) {
+  #restaurants .restaurant--card {
+    width: 435px;
+    height: 350px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  #restaurants .restaurant--card {
+    width: 535px;
+    height: 450px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  #restaurants {
+    justify-content: flex-start;
+    min-height: 0;
+  }
 }
 
 @keyframes spine {
@@ -595,8 +1030,6 @@ html {
 }
 
 body {
-  width: 100%;
-  height: 100%;
   margin: 0;
   padding: 0;
   font-family: "Roboto", sans-serif;

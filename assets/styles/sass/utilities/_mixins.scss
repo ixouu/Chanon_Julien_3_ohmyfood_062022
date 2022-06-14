@@ -1,18 +1,3 @@
-@mixin courseTitle{
-    text-transform: uppercase;
-    font-weight: 400;
-    font-size: 1rem;
-    margin-bottom: 25px;
-    position: relative;
-    &::before{
-        content: '';
-        height: 3px;
-        width: 40px;
-        background-color: $colorThrid;
-        position: absolute;
-        bottom: -7px;
-    }
-}
 @mixin mainButtons{
     font-size: 1.1rem;
     width: 220px;
@@ -28,15 +13,40 @@
     a{
         color: $fontColorBtn;
         text-decoration: none;
+        @include tablettes-only{
+            font-size: 1.4rem;
+        }
+        @include desktop-only{
+            font-size: 1.6rem;
+        }
     }
     &:hover{
         box-shadow: $boxShadowHover;
     }
+    @include tablettes-only{
+        width: 340px;
+        height: 75px;
+    }
+    @include desktop-only{
+        width: 420px;
+        height: 80px;
+    }
 }
-
 @mixin coursesAnimation{
     width: 0%;
     height: auto;
     animation: showCourses .4s ease-out forwards 1;
     opacity: 0;
 }
+//mediaquerries
+@mixin tablettes-only { 
+    @media screen and (min-width: map-get($breakpoints, mobile)) and (max-width : map-get($breakpoints, desktop)) { 
+      @content 
+    } 
+  };
+
+  @mixin desktop-only { 
+    @media screen and (min-width : map-get($breakpoints, desktop)) { 
+      @content 
+    } 
+  };
