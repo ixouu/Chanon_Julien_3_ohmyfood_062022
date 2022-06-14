@@ -17,4 +17,10 @@ header{
         transform: translateY(-50%);
         color: $colorLinks;
     }
+    @include tablettes-only{
+        height: 80px;
+    }
+    @include desktop-only{
+        height: 100px;
+    }
 }

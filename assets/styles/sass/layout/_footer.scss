@@ -10,33 +10,74 @@ footer{
         padding: 25px 0;
         font-size: 1.2rem;
         margin: 0;
+        @include tablettes-only{
+            font-size: 1.7rem;
+            text-align: center;
+        }
+        @include desktop-only{
+            font-size: 2.4rem;
+            padding: 30px 10%;
+            text-align: center;
+        }
     }
     .footer--section{
         display: flex;
         justify-content: flex-start;
         flex-direction: column;
+        @include tablettes-only{
+            flex-direction: row;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        @include desktop-only{
+            flex-direction: row;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
         a{
             color: white;
             text-decoration: none;
             padding:0 0 14px 0;
+            position: relative;
+            @include tablettes-only{
+                font-size: 1rem;
+                padding:3% 5%;
+            }
+            @include desktop-only{
+                font-size: 1.2rem;
+                padding:3% 5%;
+            }
+            &.utensils, &.handshake{
+                padding-left: 27px;
+                @include desktop-only{
+                    padding-left: 45px;
+                }
+            }
+        }
+        .utensils::before, .handshake::before{
+            content: '';
+            width: 15px;
+            height: 15px;
+            display: inline-block;
+            background-size: 15px 15px;
+            position: absolute;
+            left: 0;
+            @include tablettes-only{
+                width: 20px;
+                height: 20px;
+                background-size: 20px 20px;
+            }
+            @include desktop-only{
+                width: 30px;
+                height: 30px;
+                background-size: 30px 30px;
+            }
         }
         .utensils::before{
-            content: '';
-            width: 15px;
-            height: 15px;
-            display: inline-block;
-            margin-right: 15px;
             background-image: url(../images/svg/utensils.svg);
-            background-size: 15px 15px;
         }
         .handshake::before{
-            content: '';
-            width: 15px;
-            height: 15px;
-            display: inline-block;
-            margin-right: 15px;
             background-image: url(../images/svg/handshake.svg);
-            background-size: 15px 15px;
             transform: rotate(-45deg);
         }
         &:last-child{
