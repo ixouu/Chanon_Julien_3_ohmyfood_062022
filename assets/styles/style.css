@@ -554,44 +554,40 @@ header .fa-arrow-left {
 }
 .wrapper {
   display: flex;
-  flex-direction: row;
-  width: 200vw;
-  height: 100%;
-  overflow-x: hidden;
 }
-.wrapper .loader {
-  width: 100vw;
-  height: 100vh;
+
+.loader {
   display: flex;
   align-items: center;
   justify-content: center;
-  animation: hide 0.2s ease-out forwards 1;
-  animation-delay: 3s;
-  position: relative;
+  animation: hide 0.3s ease-out forwards 1 3000ms;
   background-color: #F6F6F6;
+  height: 100vh;
 }
-.wrapper circle {
+
+circle {
   fill: none;
   stroke: #9356dc;
   stroke-width: 10px;
   stroke-dasharray: 100 100;
   stroke-dashoffset: 70;
-  animation: spine 3s ease-in-out forwards 1;
+  animation: spine 3000ms ease-in-out forwards 1;
 }
-.wrapper #spinner {
+
+#spinner {
   transform: translateX(-50px);
   filter: drop-shadow(50px 0 #ff79da);
   position: absolute;
   top: 45%;
   left: 45%;
   transform: translate(-50%, -50%);
-  animation: hide 0.2s ease forwards 1;
-  animation-delay: 3s;
 }
-.wrapper .indexContent {
-  width: 100vw;
-  height: 100%;
-  transition: all ease-out;
+
+.indexContent {
+  transform: translateY(-9999px);
+  transform: translateX(-9999px);
+  animation: show 0.3s ease-out forwards 1 3000ms;
+  width: 100%;
 }
 
 @media screen and (min-width: 599px) and (max-width: 1200px) {
@@ -994,7 +990,7 @@ header .fa-arrow-left {
     opacity: 1;
   }
   80% {
-    opacity: 0.8;
+    opacity: 0.75;
   }
   100% {
     stroke-dasharray: 20 20;
@@ -1004,19 +1000,15 @@ header .fa-arrow-left {
   }
 }
 @keyframes show {
-  0% {
-    width: 0;
-  }
   100% {
-    width: 100vw;
+    transform: translateX(0);
+    transform: translateY(0);
   }
 }
 @keyframes hide {
-  0% {
-    width: 100vw;
-  }
   100% {
-    width: 0;
+    transform: translateX(-9999px);
+    transform: translateY(-9999px);
   }
 }
 *,
