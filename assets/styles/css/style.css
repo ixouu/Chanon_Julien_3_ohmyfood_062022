@@ -13,6 +13,8 @@ footer .footer--title {
   padding: 25px 0;
   font-size: 1.2rem;
   margin: 0;
+  text-decoration: none;
+  color: white;
 }
 @media screen and (min-width: 599px) and (max-width: 1200px) {
   footer .footer--title {
@@ -113,11 +115,31 @@ header {
   display: flex;
   align-items: center;
   justify-content: center;
-  position: relative;
 }
-header picture img {
-  width: 165px;
-  padding-top: 13px;
+header .header--title {
+  animation: backgroundRotate 20s infinite linear;
+  background-image: linear-gradient(175deg, #9356DC, #FF79DA);
+  font-family: "Shrikhand", sans-serif;
+  height: fit-content;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-background-clip: text;
+  -moz-text-fill-color: transparent;
+  background-size: 100%;
+  background-repeat: repeat;
+}
+@media screen and (min-width: 599px) and (max-width: 1200px) {
+  header .header--title {
+    font-size: 1.7rem;
+    text-align: center;
+  }
+}
+@media screen and (min-width: 1200px) {
+  header .header--title {
+    font-size: 2.4rem;
+    padding: 30px 10%;
+    text-align: center;
+  }
 }
 header .fa-arrow-left {
   position: absolute;
@@ -137,6 +159,14 @@ header .fa-arrow-left {
   }
 }
 
+@keyframes backgroundRotate {
+  from {
+    -webkit-filter: hue-rotate(0deg);
+  }
+  to {
+    -webkit-filter: hue-rotate(-90deg);
+  }
+}
 .wrapper--menu {
   position: relative;
   height: fit-content;
@@ -578,20 +608,17 @@ header .fa-arrow-left {
     opacity: 1;
   }
 }
-.wrapper {
-  display: flex;
-}
-
 .loader {
+  animation: hide 0.3s ease-out forwards 1 3000ms;
+  background-color: #F6F6F6;
+  width: 100%;
+  height: 100vh;
+  position: fixed;
   display: flex;
   align-items: center;
   justify-content: center;
-  animation: hide 0.3s ease-out forwards 1 3000ms;
-  background-color: #F6F6F6;
-  height: 100vh;
 }
-
-circle {
+.loader circle {
   fill: none;
   stroke: #9356dc;
   stroke-width: 10px;
@@ -599,31 +626,14 @@ circle {
   stroke-dashoffset: 70;
   animation: spine 3000ms ease-in-out forwards 1;
 }
-
-#spinner {
-  transform: translateX(-50px);
+.loader #spinner--svg {
   filter: drop-shadow(50px 0 #ff79da);
-  position: absolute;
-  top: 45%;
-  left: 45%;
-  transform: translate(-50%, -50%);
 }
 
 .indexContent {
-  transform: translate(-9999px);
+  transform: translateX(9999px);
   animation: show 0.3s ease-out forwards 1 3000ms;
   width: 100%;
-}
-
-@media screen and (min-width: 599px) and (max-width: 1200px) {
-  header {
-    height: 80px;
-  }
-}
-@media screen and (min-width: 1200px) {
-  header {
-    height: 100px;
-  }
 }
 
 .location {
@@ -782,6 +792,11 @@ circle {
   align-items: center;
   justify-content: space-evenly;
 }
+@media screen and (min-width: 1200px) {
+  .operation .operation--buttons {
+    flex-direction: row;
+  }
+}
 .operation .operation--button {
   width: 325px;
   height: 75px;
@@ -935,6 +950,8 @@ circle {
   border-radius: 30px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   transition: all 0.2s ease-out;
+  text-decoration: none;
+  color: #000000;
 }
 #restaurants .restaurant--card:hover {
   box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.4);
@@ -973,7 +990,7 @@ circle {
   text-decoration: none;
   color: #000000;
 }
-#restaurants .restaurant--card .restaurant--card__like {
+#restaurants .restaurant--card .restaurant--card__like, #restaurants .restaurant--card .addRestaurant--card__like {
   position: absolute;
   display: inline-block;
   right: 7.5%;
@@ -982,22 +999,24 @@ circle {
   height: 25px;
   transform: translateY(-50%);
   transition: all 0.4s ease-out;
-  background: black;
   cursor: pointer;
-  mask: url(../../../assets/images/svg/heart.svg) no-repeat;
-  mask-size: contain;
 }
-#restaurants .restaurant--card .restaurant--card__like:hover {
+#restaurants .restaurant--card .restaurant--card__like .fa-heart:hover, #restaurants .restaurant--card .addRestaurant--card__like .fa-heart:hover {
+  font-weight: 900;
   background: linear-gradient(to bottom, #9356DC, #FF79DA);
+  color: transparent;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  cursor: pointer;
 }
 @media screen and (min-width: 599px) and (max-width: 1200px) {
-  #restaurants .restaurant--card .restaurant--card__like {
+  #restaurants .restaurant--card .restaurant--card__like, #restaurants .restaurant--card .addRestaurant--card__like {
     width: 30px;
     height: 35px;
   }
 }
 @media screen and (min-width: 1200px) {
-  #restaurants .restaurant--card .restaurant--card__like {
+  #restaurants .restaurant--card .restaurant--card__like, #restaurants .restaurant--card .addRestaurant--card__like {
     width: 40px;
     height: 45px;
   }
@@ -1067,7 +1086,8 @@ circle {
 }
 @keyframes hide {
   100% {
-    transform: translate(-9999px);
+    opacity: 0;
+    visibility: hidden;
   }
 }
 *,
