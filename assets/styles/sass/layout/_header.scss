@@ -6,20 +6,21 @@ header{
     align-items: center;
     justify-content: center;
     .header--title{
-            animation: backgroundRotate 20s infinite linear;
-            background-image: linear-gradient(175deg, $colorPrimary, $colorSecondary);
-            font-family:  $fontShrikhand;
-            height: fit-content;
-            // margin-top: -.2em;
-            // padding-left: .1em;
-            // padding-right: .1em;
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent; 
-            -moz-background-clip: text;
-            -moz-text-fill-color: transparent;
-            background-size: 100%;
-            background-repeat: repeat;
-
+        animation: backgroundRotate 20s infinite linear;
+        background-image: linear-gradient(175deg, $colorPrimary, $colorSecondary);
+        font-family:  $fontShrikhand;
+        font-size: 2rem;
+        height: fit-content;
+        // margin-top: -.2em;
+        // padding-left: .1em;
+        // padding-right: .1em;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent; 
+        -moz-background-clip: text;
+        -moz-text-fill-color: transparent;
+        background-size: 100%;
+        background-repeat: repeat;
+        text-decoration: none;
         @include tablettes-only{
             font-size: 1.7rem;
             text-align: center;

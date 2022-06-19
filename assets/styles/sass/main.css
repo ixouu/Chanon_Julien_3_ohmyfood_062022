@@ -120,7 +120,6 @@ header .header--title {
   animation: backgroundRotate 20s infinite linear;
   background-image: linear-gradient(175deg, #9356DC, #FF79DA);
   font-family: "Shrikhand", sans-serif;
-  font-size: 2rem;
   height: fit-content;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -128,7 +127,6 @@ header .header--title {
   -moz-text-fill-color: transparent;
   background-size: 100%;
   background-repeat: repeat;
-  text-decoration: none;
 }
 @media screen and (min-width: 599px) and (max-width: 1200px) {
   header .header--title {
@@ -277,26 +275,6 @@ header .fa-arrow-left {
   justify-content: space-between;
   align-items: center;
 }
-.mainContent--title .fa-heart:hover {
-  font-weight: 900;
-  background: linear-gradient(to bottom, #9356DC, #FF79DA);
-  color: transparent;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  cursor: pointer;
-}
-@media screen and (min-width: 599px) and (max-width: 1200px) {
-  .mainContent--title .fa-heart {
-    margin-right: 40px;
-    width: 40px;
-    height: 40px;
-  }
-}
-@media screen and (min-width: 1200px) {
-  .mainContent--title .fa-heart {
-    margin-right: 60px;
-  }
-}
 .mainContent--title h1 {
   font-family: "Shrikhand", sans-serif;
   font-size: 1.8rem;
@@ -314,6 +292,23 @@ header .fa-arrow-left {
     font-size: 3rem;
     padding-left: 25%;
     letter-spacing: 0;
+  }
+}
+.mainContent--title .like {
+  margin-right: 20px;
+  width: 30px;
+  height: 30px;
+}
+@media screen and (min-width: 599px) and (max-width: 1200px) {
+  .mainContent--title .like {
+    margin-right: 40px;
+    width: 40px;
+    height: 40px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .mainContent--title .like {
+    margin-right: 60px;
   }
 }
 
@@ -945,7 +940,7 @@ header .fa-arrow-left {
     padding-bottom: 30px;
   }
 }
-#restaurants .restaurant--card a {
+#restaurants .restaurant--card {
   width: 335px;
   height: 250px;
   display: flex;
@@ -958,17 +953,17 @@ header .fa-arrow-left {
   text-decoration: none;
   color: #000000;
 }
-#restaurants .restaurant--card a:hover {
+#restaurants .restaurant--card:hover {
   box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.4);
 }
-#restaurants .restaurant--card a .restaurant--card__img {
+#restaurants .restaurant--card .restaurant--card__img {
   width: 100%;
   min-width: 335px;
   height: 68%;
   border-radius: 15px 15px 0 0;
   object-fit: cover;
 }
-#restaurants .restaurant--card a .restaurant--card__content {
+#restaurants .restaurant--card .restaurant--card__content {
   height: 32%;
   display: flex;
   flex-direction: column;
@@ -979,23 +974,23 @@ header .fa-arrow-left {
   border-radius: 0 0 15px 15px;
 }
 @media screen and (min-width: 599px) and (max-width: 1200px) {
-  #restaurants .restaurant--card a .restaurant--card__content {
+  #restaurants .restaurant--card .restaurant--card__content {
     font-size: 1.5rem;
   }
 }
 @media screen and (min-width: 1200px) {
-  #restaurants .restaurant--card a .restaurant--card__content {
+  #restaurants .restaurant--card .restaurant--card__content {
     font-size: 1.7rem;
   }
 }
-#restaurants .restaurant--card a h3 {
+#restaurants .restaurant--card h3 {
   margin: 0;
 }
-#restaurants .restaurant--card a a {
+#restaurants .restaurant--card a {
   text-decoration: none;
   color: #000000;
 }
-#restaurants .restaurant--card a .restaurant--card__like, #restaurants .restaurant--card a .addRestaurant--card__like {
+#restaurants .restaurant--card .restaurant--card__like, #restaurants .restaurant--card .addRestaurant--card__like {
   position: absolute;
   display: inline-block;
   right: 7.5%;
@@ -1006,7 +1001,7 @@ header .fa-arrow-left {
   transition: all 0.4s ease-out;
   cursor: pointer;
 }
-#restaurants .restaurant--card a .restaurant--card__like .fa-heart:hover, #restaurants .restaurant--card a .addRestaurant--card__like .fa-heart:hover {
+#restaurants .restaurant--card .restaurant--card__like .fa-heart:hover, #restaurants .restaurant--card .addRestaurant--card__like .fa-heart:hover {
   font-weight: 900;
   background: linear-gradient(to bottom, #9356DC, #FF79DA);
   color: transparent;
@@ -1015,18 +1010,18 @@ header .fa-arrow-left {
   cursor: pointer;
 }
 @media screen and (min-width: 599px) and (max-width: 1200px) {
-  #restaurants .restaurant--card a .restaurant--card__like, #restaurants .restaurant--card a .addRestaurant--card__like {
+  #restaurants .restaurant--card .restaurant--card__like, #restaurants .restaurant--card .addRestaurant--card__like {
     width: 30px;
     height: 35px;
   }
 }
 @media screen and (min-width: 1200px) {
-  #restaurants .restaurant--card a .restaurant--card__like, #restaurants .restaurant--card a .addRestaurant--card__like {
+  #restaurants .restaurant--card .restaurant--card__like, #restaurants .restaurant--card .addRestaurant--card__like {
     width: 40px;
     height: 45px;
   }
 }
-#restaurants .restaurant--card a .restaurant--card__new {
+#restaurants .restaurant--card .restaurant--card__new {
   position: absolute;
   width: 24%;
   height: 12%;
@@ -1041,13 +1036,13 @@ header .fa-arrow-left {
   justify-content: center;
 }
 @media screen and (min-width: 599px) and (max-width: 1200px) {
-  #restaurants .restaurant--card a {
+  #restaurants .restaurant--card {
     width: 435px;
     height: 350px;
   }
 }
 @media screen and (min-width: 1200px) {
-  #restaurants .restaurant--card a {
+  #restaurants .restaurant--card {
     width: 535px;
     height: 450px;
   }
@@ -1112,12 +1107,4 @@ body {
 }
 body h1, body h2, body h3, body h4 {
   margin: 0;
-}
-body ul, body li {
-  padding: 0;
-}
-body li {
-  list-style-type: none;
-}
-
-/*# sourceMappingURL=style.css.map */
+}/*# sourceMappingURL=main.css.map */

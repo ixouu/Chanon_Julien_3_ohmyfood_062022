@@ -38,73 +38,76 @@
             <!-- Operation -->
             <section class="operation">
                 <h4 class='operation--title'>Fonctionnement</h4>
-                <div class="operation--buttons">
-                    <div class="operation--button operation--button__1">
+                <ul class="operation--buttons">
+                    <li class="operation--button operation--button__1">
                         <div class="operation--button__number"><span>1</span></div>
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" width="20px" height="20px"  class="operation--button__icon"><!--! Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M320 0H64C37.5 0 16 21.5 16 48v416C16 490.5 37.5 512 64 512h256c26.5 0 48-21.5 48-48v-416C368 21.5 346.5 0 320 0zM240 447.1C240 456.8 232.8 464 224 464H159.1C151.2 464 144 456.8 144 448S151.2 432 160 432h64C232.8 432 240 439.2 240 447.1z"/></svg>
                         <p class="operation--button__content">Choisissez un restaurant</p>
-                    </div>
-                    <div class="operation--button operation--button__2">
+                    </li>
+                    <li class="operation--button operation--button__2">
                         <div class="operation--button__number"><span>2</span></div>
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="20px" height="20px" class="operation--button__icon"><!--! Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M16 96C16 69.49 37.49 48 64 48C90.51 48 112 69.49 112 96C112 122.5 90.51 144 64 144C37.49 144 16 122.5 16 96zM480 64C497.7 64 512 78.33 512 96C512 113.7 497.7 128 480 128H192C174.3 128 160 113.7 160 96C160 78.33 174.3 64 192 64H480zM480 224C497.7 224 512 238.3 512 256C512 273.7 497.7 288 480 288H192C174.3 288 160 273.7 160 256C160 238.3 174.3 224 192 224H480zM480 384C497.7 384 512 398.3 512 416C512 433.7 497.7 448 480 448H192C174.3 448 160 433.7 160 416C160 398.3 174.3 384 192 384H480zM16 416C16 389.5 37.49 368 64 368C90.51 368 112 389.5 112 416C112 442.5 90.51 464 64 464C37.49 464 16 442.5 16 416zM112 256C112 282.5 90.51 304 64 304C37.49 304 16 282.5 16 256C16 229.5 37.49 208 64 208C90.51 208 112 229.5 112 256z"/></svg>
                         <p class="operation--button__content">Composez votre menu</p>
-                    </div>
-                    <div class="operation--button operation--button__3">
+                    </li>
+                    <li class="operation--button operation--button__3">
                         <div class="operation--button__number"><span>3</span></div>
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" width="20px" height="20px" class="operation--button__icon"><!--! Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path  d="M495.5 223.2C491.6 223.7 487.6 224 483.4 224C457.4 224 434.2 212.6 418.3 195C402.4 212.6 379.2 224 353.1 224C327 224 303.8 212.6 287.9 195C272 212.6 248.9 224 222.7 224C196.7 224 173.5 212.6 157.6 195C141.7 212.6 118.5 224 92.36 224C88.3 224 84.21 223.7 80.24 223.2C24.92 215.8-1.255 150.6 28.33 103.8L85.66 13.13C90.76 4.979 99.87 0 109.6 0H466.4C476.1 0 485.2 4.978 490.3 13.13L547.6 103.8C577.3 150.7 551 215.8 495.5 223.2H495.5zM499.7 254.9C503.1 254.4 508 253.6 512 252.6V448C512 483.3 483.3 512 448 512H128C92.66 512 64 483.3 64 448V252.6C67.87 253.6 71.86 254.4 75.97 254.9L76.09 254.9C81.35 255.6 86.83 256 92.36 256C104.8 256 116.8 254.1 128 250.6V384H448V250.7C459.2 254.1 471.1 256 483.4 256C489 256 494.4 255.6 499.7 254.9L499.7 254.9z"/></svg>
                         <p class="operation--button__content">Dégustez au restaurant</p>
-                    </div>
-                </div>
+                    </li>
+                </ul>
             </section>
             <!-- Restaurants -->
             <section id="restaurants">
                 <h4 class="restaurants--title">Restaurants</h4>
-                <div class="restaurants--cards">
-                    <a href="./html/menu-la_palette_du_gout.html" class="restaurant--card restaurant--card__1">
-                        <img src="./assets/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="Photo du restaurant La palette du goût" class="restaurant--card__img">
-                        <div class="restaurant--card__new">
-                            <span>Nouveau</span>
-                        </div>
-                        <div class="restaurant--card__content">
-                            <h3>La palette du goût</h3>
-                            <span>Ménilmontant</span>
-                            <span class="restaurant--card__like"><i class="far fa-heart"></i></span>
-                            <span class="addRestaurant--card__like"><i class="far fa-heart"></i></span>
-                        </div>
-                    </a>
-                    <a href="./html/menu-la_note_enchantee.html" class="restaurant--card restaurant--card__2">
-                        <img src="./assets/images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg" alt="Photo du restaurant La note enchantée" class="restaurant--card__img">
-                        <div class="restaurant--card__new">
-                            <span>Nouveau</span>
-                        </div>
-                        <div class="restaurant--card__content">
-                            <h3>La note enchantée</h3>
-                            <span>Charonne</span>
-                            <span class="restaurant--card__like"><i class="far fa-heart"></i></span>
-                            <span class="addRestaurant--card__like"><i class="far fa-heart"></i></span>
-                        </div>
-                    </a>
-                    <a href="./html/menu-a_la_francaise.html" class="restaurant--card restaurant--card__3">
-                        <img src="./assets/images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg" alt="Photo du restaurant À la française" class="restaurant--card__img">
-                        <div class="restaurant--card__content">
-                            <h3>À la française</h3>
-                            <span>Cité Rouge</span>
-                            <span class="restaurant--card__like"><i class="far fa-heart"></i></span>
-                            <span class="addRestaurant--card__like"><i class="far fa-heart"></i></span>
-                        </div>
-                    </a>
-                    <a href="./html/menu-le_delice_des_sens.html" class="restaurant--card restaurant--card__4">
-                        <img src="./assets/images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg" alt="Photo du restaurant Le délice des sens" class="restaurant--card__img">
-                        <div class="restaurant--card__content">
-                            <h3>Le délice des sens</h3>
-                            <span>Folie-Méricourt</span>
-                            <span class="restaurant--card__like"><i class="far fa-heart"></i></span>
-                            <span class="addRestaurant--card__like"><i class="far fa-heart"></i></span>
-                        </div>
-                    </a>
-                </div>
+                <ul class="restaurants--cards">
+                    <li class="restaurant--card restaurant--card__1">
+                        <a href="./html/menu-la_palette_du_gout.html" >
+                            <img src="./assets/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="Photo du restaurant La palette du goût" class="restaurant--card__img">
+                            <div class="restaurant--card__new">
+                                <span>Nouveau</span>
+                            </div>
+                            <div class="restaurant--card__content">
+                                <h3>La palette du goût</h3>
+                                <span>Ménilmontant</span>
+                                <span class="restaurant--card__like"><i class="far fa-heart"></i></span>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="restaurant--card restaurant--card__2">
+                        <a href="./html/menu-la_note_enchantee.html">
+                            <img src="./assets/images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg" alt="Photo du restaurant La note enchantée" class="restaurant--card__img">
+                            <div class="restaurant--card__new">
+                                <span>Nouveau</span>
+                            </div>
+                            <div class="restaurant--card__content">
+                                <h3>La note enchantée</h3>
+                                <span>Charonne</span>
+                                <span class="restaurant--card__like"><i class="far fa-heart"></i></span>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="restaurant--card restaurant--card__3">
+                        <a href="./html/menu-a_la_francaise.html">
+                            <img src="./assets/images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg" alt="Photo du restaurant À la française" class="restaurant--card__img">
+                            <div class="restaurant--card__content">
+                                <h3>À la française</h3>
+                                <span>Cité Rouge</span>
+                                <span class="restaurant--card__like"><i class="far fa-heart"></i></span>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="restaurant--card restaurant--card__4">
+                        <a href="./html/menu-le_delice_des_sens.html">
+                            <img src="./assets/images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg" alt="Photo du restaurant Le délice des sens" class="restaurant--card__img">
+                            <div class="restaurant--card__content">
+                                <h3>Le délice des sens</h3>
+                                <span>Folie-Méricourt</span>
+                                <span class="restaurant--card__like"><i class="far fa-heart"></i></span>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
             </section>
-        
             <!-- Footer -->
             <footer>
                 <a href="#" class="footer--title">ohmyfood</a>
