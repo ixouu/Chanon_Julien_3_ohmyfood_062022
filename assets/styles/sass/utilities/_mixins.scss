@@ -50,7 +50,7 @@
            cursor: pointer;
         }
 }
-//mediaquerries
+//media querries
 @mixin tablettes-only { 
     @media screen and (min-width: map-get($breakpoints, mobile)) and (max-width : map-get($breakpoints, desktop)) { 
       @content 
