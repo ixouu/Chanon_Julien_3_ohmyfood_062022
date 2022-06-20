@@ -1,8 +1,32 @@
 // Colors
 $colorPrimary : #9356DC;
+$colorPrimaryLighter: #9256dc2d;
 $colorSecondary : #FF79DA;
 $colorThrid : #99E2D0;
+$colorLinks : #000000;
+$colorThridDarker : #008766;
+$backgroundColor : #EAEAEA;
+$footerColor : #353535;
+$backgroundColorDarker : #F6F6F6;
+$indexIconColor : #7e7e7e;
+
+//box-shahow
+$boxShadow : 0 4px 8px 0 rgba(0,0,0,0.2);
+$boxShadowHover:  0 8px 16px 0 rgba(0,0,0,0.4);
 
 //Fonts
 $fontRoboto : 'Roboto', sans-serif;
 $fontShrikhand : 'Shrikhand', sans-serif;
+$fontSizeTitle : 1.5rem;
+$fontColorBtn : #FFFFFF;
+
+//Animations
+$animationDuration: 3000ms;
+$animationDelay : 3000ms;
+
+//media querries
+$breakpoints: (
+  mobile: 599px,
+  tablettes : 900px,
+  desktop : 1200px
+);

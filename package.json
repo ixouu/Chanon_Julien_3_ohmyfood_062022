@@ -1,0 +1,21 @@
+{
+  "name": "chanon_julien_3_ohmyfood_062022",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.html",
+  "scripts": {
+    "sass": "sass --watch ./assets/styles/sass/main.scss:./assets/styles/css/style.css",
+    "prefix": "postcss ./assets/styles/css/style.css --use autoprefixer -d ./assets/styles/css/prefixed/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ixouu/Chanon_Julien_3_ohmyfood_062022.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "browserslist" : ["Firefox","Chrome"],
+  "bugs": {
+    "url": "https://github.com/ixouu/Chanon_Julien_3_ohmyfood_062022/issues"
+  },
+  "homepage": "https://github.com/ixouu/Chanon_Julien_3_ohmyfood_062022#readme"
+}

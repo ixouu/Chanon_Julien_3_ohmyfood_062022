@@ -1,0 +1,56 @@
+header{
+    height: 63px;
+    width: 100%;
+    box-shadow: $boxShadow;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    .header--title{
+        animation: backgroundRotate 20s infinite linear;
+        background-image: linear-gradient(175deg, $colorPrimary, $colorSecondary);
+        font-family:  $fontShrikhand;
+        font-size: 2rem;
+        height: fit-content;
+        width: 100%;
+        text-align: center;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent; 
+        -moz-background-clip: text;
+        -moz-text-fill-color: transparent;
+        background-size: 100%;
+        background-repeat: repeat;
+        text-decoration: none;
+        @include tablettes-only{
+            font-size: 1.7rem;
+            text-align: center;
+        }
+        @include desktop-only{
+            font-size: 2.4rem;
+            padding: 30px 10%;
+            text-align: center;
+        }
+    }
+
+    .fa-arrow-left{
+        position: absolute;
+        left: 6.4%;
+        top:50%;
+        transform: translateY(-50%);
+        color: $colorLinks;
+    }
+    @include tablettes-only{
+        height: 80px;
+    }
+    @include desktop-only{
+        height: 100px;
+    }
+}
+@keyframes backgroundRotate{
+    from {
+      -webkit-filter: hue-rotate(0deg);
+    }
+    to {
+      -webkit-filter: hue-rotate(-90deg);
+    }
+  }

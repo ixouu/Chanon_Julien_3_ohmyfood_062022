@@ -4,61 +4,215 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ohmyfood - Commande de repas en ligne - </title>
+    <title>Ohmyfood - Commande de repas en ligne - La note enchantée</title>
     <!--CSS Link-->
-    <link rel="stylesheet" href="./assets/styles/style.css">
+    <link rel="stylesheet" href="../assets/styles/css/style.css">
     <!--Icons-->
     <script src="https://kit.fontawesome.com/8675312190.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <!--Header-->
     <header>
-        <i class="fa-solid fa-arrow-left"></i>
-        <div class="header--logo">
-            <picture>
-                <source media="(max-width: 599px)" srcset="assets/images/logo/ohmyfood.png">
-                <source media="(min-width: 600px)" srcset="assets/images/logo/ohmyfood@2x.svg">
-                <img src="assets/images/logo/ohmyfood@2x.svg" alt="Logo ohmyfood">
-            </picture>
-        </div>
+        <a href="../index.html"><i class="fa-solid fa-arrow-left fa-xl"></i></a>
+        <a href="../index.html" class="header--title">ohmyfood</a>
     </header>
     <!--main Picture-->
-    <div class="mainPicture">
-        <img src="" alt="Image du restaurant ">
-    </div>
-    <!-- Main Content -->
-    <div class="mainContent">
-        <!-- Title -->
-        <div class="mainContent--title">
-            <h1></h1>
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="20px" height='25px' class="like"><!--! Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path fill='#000000' d="M244 84L255.1 96L267.1 84.02C300.6 51.37 347 36.51 392.6 44.1C461.5 55.58 512 115.2 512 185.1V190.9C512 232.4 494.8 272.1 464.4 300.4L283.7 469.1C276.2 476.1 266.3 480 256 480C245.7 480 235.8 476.1 228.3 469.1L47.59 300.4C17.23 272.1 0 232.4 0 190.9V185.1C0 115.2 50.52 55.58 119.4 44.1C164.1 36.51 211.4 51.37 244 84C243.1 84 244 84.01 244 84L244 84zM255.1 163.9L210.1 117.1C188.4 96.28 157.6 86.4 127.3 91.44C81.55 99.07 48 138.7 48 185.1V190.9C48 219.1 59.71 246.1 80.34 265.3L256 429.3L431.7 265.3C452.3 246.1 464 219.1 464 190.9V185.1C464 138.7 430.4 99.07 384.7 91.44C354.4 86.4 323.6 96.28 301.9 117.1L255.1 163.9z"/></svg>
-        </div>
-        <!-- Starters -->
-        <div class="mainContent--starters">
-
-        </div>
-        <!-- Mains -->
-        <div class="mainContent--mains">
-
-        </div>
-        <!-- Desserts -->
-        <div class="mainContent--desserts">
-
-        </div>
-        <!-- Order Button -->
-        <div class="mainContent--button">
-            <button></button>
-        </div>
+    <div class="wrapper--menu">
+        <div class="mainPicture mainPicture--laNoteEnchantee"></div>
+        <!-- Main Content -->
+        <main class="mainContent">
+            <!-- Title -->
+            <div class="mainContent--title">
+                <h1>La note enchantée</h1>
+                <span class="restaurant--card__like"><i class="fa-2x far fa-heart"></i></span>
+            </div>
+            <!-- Starters -->
+            <section class="mainContent--starters">
+                <h4>Entrées</h4>
+                <article class="course">
+                    <div class="course--details">
+                        <div class="course--details__title">
+                            <span class="title">Ravioles de foie gras</span>
+                        </div>
+                        <div class="course--details__subtitle">
+                            <span class="subtitle">Accompagnés de leur crème à la truffe</span>
+                        </div>
+                    </div>
+                    <div class="course--price">
+                        <span class="price">25€</span>
+                    </div>
+                    <div class="course--added">
+                        <i class="fa-solid fa-circle-check fa-xl"></i>
+                    </div>
+                </article>
+                <article class="course">
+                    <div class="course--details">
+                        <div class="course--details__title">
+                            <span class="title">Caviar osciètre</span>
+                        </div>
+                        <div class="course--details__subtitle">
+                            <span class="subtitle">Sur blini à la farine de blé noir</span>
+                        </div>
+                    </div>
+                    <div class="course--price">
+                        <span class="price">35€</span>
+                    </div>
+                    <div class="course--added">
+                        <i class="fa-solid fa-circle-check fa-xl"></i>
+                    </div>
+                </article>
+                <article class="course">
+                    <div class="course--details">
+                        <div class="course--details__title">
+                            <span class="title">Homard et espuma de potiron</span>
+                        </div>
+                        <div class="course--details__subtitle">
+                            <span class="subtitle">Mariné aux zestes d'orange</span>
+                        </div>
+                    </div>
+                    <div class="course--price">
+                        <span class="price">20€</span>
+                    </div>
+                    <div class="course--added">
+                        <i class="fa-solid fa-circle-check fa-xl"></i>
+                    </div>
+                </article>
+                <article class="course">
+                    <div class="course--details">
+                        <div class="course--details__title">
+                            <span class="title">Foie gras de canard cuit entier</span>
+                        </div>
+                        <div class="course--details__subtitle">
+                            <span class="subtitle">Confiture de figue et pain toasté</span>
+                        </div>
+                    </div>
+                    <div class="course--price">
+                        <span class="price">35€</span>
+                    </div>
+                    <div class="course--added">
+                        <i class="fa-solid fa-circle-check fa-xl"></i>
+                    </div>
+                </article>
+            </section>
+            <!-- Mains -->
+            <section class="mainContent--mains">
+                <h4>Plats</h4>
+                <article class="course">
+                    <div class="course--details">
+                        <div class="course--details__title">
+                            <span class="title">Noix de coquilles Saint-Jacques</span>
+                        </div>
+                        <div class="course--details__subtitle">
+                            <span class="subtitle">Sur lit de purée de céleri-rave</span>
+                        </div>
+                    </div>
+                    <div class="course--price">
+                        <span class="price">40€</span>
+                    </div>
+                    <div class="course--added">
+                        <i class="fa-solid fa-circle-check fa-xl"></i>
+                    </div>
+                </article>
+                <article class="course">
+                    <div class="course--details">
+                        <div class="course--details__title">
+                            <span class="title">Langoustine poêlée</span>
+                        </div>
+                        <div class="course--details__subtitle">
+                            <span class="subtitle">Purée de patate douce</span>
+                        </div>
+                    </div>
+                    <div class="course--price">
+                        <span class="price">35€</span>
+                    </div>
+                    <div class="course--added">
+                        <i class="fa-solid fa-circle-check fa-xl"></i>
+                    </div>
+                </article>
+                <article class="course">
+                    <div class="course--details">
+                        <div class="course--details__title">
+                            <span class="title">Mijoté de queue de boeuf</span>
+                        </div>
+                        <div class="course--details__subtitle">
+                            <span class="subtitle">Et riz sauvage aux zestes de citron</span>
+                        </div>
+                    </div>
+                    <div class="course--price">
+                        <span class="price">44€</span>
+                    </div>
+                    <div class="course--added">
+                        <i class="fa-solid fa-circle-check fa-xl"></i>
+                    </div>
+                </article>
+            </section>
+            <!-- Desserts -->
+            <section class="mainContent--desserts">
+                <h4>Desserts</h4>
+                <article class="course">
+                    <div class="course--details">
+                        <div class="course--details__title">
+                            <span class="title">Macaron noisette et chocolat</span>
+                        </div>
+                        <div class="course--details__subtitle">
+                            <span class="subtitle">Glace au caramel brun et sel de Guérande</span>
+                        </div>
+                    </div>
+                    <div class="course--price">
+                        <span class="price">18€</span>
+                    </div>
+                    <div class="course--added">
+                        <i class="fa-solid fa-circle-check fa-xl"></i>
+                    </div>
+                </article>
+                <article class="course">
+                    <div class="course--details">
+                        <div class="course--details__title">
+                            <span class="title">Baba au rhum revisité</span>
+                        </div>
+                        <div class="course--details__subtitle">
+                            <span class="subtitle">Avec son coulis de citron</span>
+                        </div>
+                    </div>
+                    <div class="course--price">
+                        <span class="price">22€</span>
+                    </div>
+                    <div class="course--added">
+                        <i class="fa-solid fa-circle-check fa-xl"></i>
+                    </div>
+                </article>
+                <article class="course">
+                    <div class="course--details">
+                        <div class="course--details__title">
+                            <span class="title">Tarte au citron meringuée </span>
+                        </div>
+                        <div class="course--details__subtitle">
+                            <span class="subtitle">Déstructurée</span>
+                        </div>
+                    </div>
+                    <div class="course--price">
+                        <span class="price">23€</span>
+                    </div>
+                    <div class="course--added">
+                        <i class="fa-solid fa-circle-check fa-xl"></i>
+                    </div>
+                </article>
+            </section>
+            <!-- Order Button -->
+            <div class="mainContent--button">
+                <a class="button--order" href="#">Commander</a>
+            </div>
+        </main>
     </div>
     <!-- Footer -->
     <footer>
-        <p class="footer--title">ohmyfood</p>
-        <div class="footer--section">
-            <a href="#" class="utensils">Proposer un restaurant</a>
-            <a href="#" class="handshake">Devenir partenaire</a>
-            <a href="#">Mentions légales</a>
-            <a href="#">Contact</a>
-        </div>
+        <a href="#" class="footer--title">ohmyfood</a>
+        <ul class="footer--section">
+            <li class="utensils"><a href="#"><i class="fa-solid fa-utensils fa-xs"></i>Proposer un restaurant</a></li>
+            <li class="handshake"><a href="#"><i class="fa-solid fa-handshake-angle fa-xs"></i>Devenir partenaire</a></li>
+            <li><a href="#">Mentions légales</a></li>
+            <li><a href="mailto:contact@ohmyfood.fr">Contact</a></li>
+        </ul>
     </footer>
 </body>
 </html>
