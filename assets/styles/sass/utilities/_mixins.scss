@@ -10,16 +10,8 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    a{
-        color: $fontColorBtn;
-        text-decoration: none;
-        @include tablettes-only{
-            font-size: 1.4rem;
-        }
-        @include desktop-only{
-            font-size: 1.6rem;
-        }
-    }
+    color: $fontColorBtn;
+    text-decoration: none;
     &:hover{
         box-shadow: $boxShadowHover;
         filter:brightness(1.1);
@@ -27,10 +19,12 @@
     @include tablettes-only{
         width: 340px;
         height: 75px;
+        font-size: 1.4rem;
     }
     @include desktop-only{
         width: 420px;
         height: 80px;
+        font-size: 1.6rem;
     }
 }
 @mixin coursesAnimation{
@@ -41,6 +35,8 @@
 }
 
 @mixin heart{
+    transition-duration: .25s;
+    font-weight: 400;
         &:hover{
             font-weight: 900;
             background:linear-gradient(to bottom, #9356DC, #FF79DA);

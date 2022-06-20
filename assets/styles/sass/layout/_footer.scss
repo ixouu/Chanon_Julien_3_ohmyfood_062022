@@ -26,6 +26,8 @@ footer{
         display: flex;
         justify-content: flex-start;
         flex-direction: column;
+        margin: 0;
+        padding-bottom: 34px;
         @include tablettes-only{
             flex-direction: row;
             justify-content: center;
@@ -36,11 +38,14 @@ footer{
             justify-content: center;
             flex-wrap: wrap;
         }
-        a{
-            color: white;
-            text-decoration: none;
+        li{
             padding:0 0 14px 0;
             position: relative;
+            text-decoration: none;
+            a{
+                color: white;
+                text-decoration: none;
+            }
             @include tablettes-only{
                 font-size: 1rem;
                 padding:3% 5%;
@@ -49,41 +54,13 @@ footer{
                 font-size: 1.2rem;
                 padding:3% 5%;
             }
-            &.utensils, &.handshake{
-                padding-left: 27px;
-                @include desktop-only{
-                    padding-left: 45px;
-                }
-            }
-        }
-        .utensils::before, .handshake::before{
-            content: '';
-            width: 15px;
-            height: 15px;
-            display: inline-block;
-            background-size: 15px 15px;
-            position: absolute;
-            left: 0;
-            @include tablettes-only{
-                width: 20px;
-                height: 20px;
-                background-size: 20px 20px;
-            }
-            @include desktop-only{
-                width: 30px;
-                height: 30px;
-                background-size: 30px 30px;
-            }
-        }
-        .utensils::before{
-            background-image: url(../../../assets/images/svg/utensils.svg);
-        }
-        .handshake::before{
-            background-image: url(../../../assets/images/svg/handshake.svg);
-            transform: rotate(-45deg);
-        }
-        &:last-child{
-            padding-bottom: 34px;
-        }
+        }   
+    }
+    .fa-handshake-angle{
+        transform: rotate(-20deg);
+    }
+    .fa-handshake-angle, .fa-utensils{
+        padding-right: .5rem;
+        width: 25px;
     }
 }
