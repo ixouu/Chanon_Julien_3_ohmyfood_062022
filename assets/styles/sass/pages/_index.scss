@@ -97,6 +97,9 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+    @include desktop-only{
+        padding: 6% 10% 6% 10%;
+    }
     .operation--title {
         font-size: $fontSizeTitle;
         padding-top: 10%;
@@ -122,221 +125,243 @@
             flex-direction: row;
         }
     }
-    .operation--button {
+    li{
         width: 325px;
-        height: 75px;
+        height: 75px; 
+        background-color: $backgroundColorDarker ;
+        border-radius: 50px;
         box-shadow: $boxShadow;
         display: flex;
         position: relative;
+        justify-content: center;
         align-items: center;
-        border-radius: 50px;
-        transition: all .2s ease-out;
-        background-color: $backgroundColorDarker ;
+        transition: all .3s ease-out;
         @include tablettes-only{
-            height: 80px;
-            width: 500px;
+            font-size: 1.2rem;
+            min-width: 440px;
+            height: 90px; 
         }
         @include desktop-only{
-            width: 700px;
-            height: 100px;
             margin: 20px 0 20px 0;
-        }
-        .operation--button__content{
-            text-align: center;
-            display: block;
-            width: 100%;
-            font-weight: 700;
-            z-index: 2000;
-            @include tablettes-only{
-                font-size: 1.2rem;
-            }
-            @include desktop-only{
-                font-size: 1.5rem;
-            }
-        }
-        .operation--button__icon{
-            position: absolute;
-            left: 12.5%;
-            top: 50%;
-            transform: translateY(-50%);
-            transition: all .2 ease-out;
-            @include tablettes-only{
-                left: 20%;
-                width: 25px;
-                height: 25px;
-            }
-            @include desktop-only{
-                left: 25%;
-                width: 30px;
-                height: 30px;
-            }
-        }
-        .operation--button__number{
-            position: absolute;
-            width: 25px;
-            height: 25px;
-            top:50%;
-            transform: translateY(-50%);
-            left: -10px;
-            border-radius: 50%;
-            background-color: $colorPrimary;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: $fontColorBtn;
-            font-size: .6rem;
-            @include tablettes-only{
-                width: 40px;
-                height: 40px;
-                font-size: .8rem;
-                left: -12.5px
-            }
-            @include desktop-only{
-                width: 60px;
-                height: 60px;
-                font-size: 1rem;
-                left: -15px;
-            }
+            font-size: 1.5rem;
+            width: 30%;
+            min-width: 440px;
+            font-size: 1.5rem;
+            height: 100px; 
         }
         &:hover{
             box-shadow: $boxShadowHover;
             background-color: $colorPrimaryLighter;
-            .operation--button__icon{
-                fill: $colorPrimary;
+            .fa-solid{
+                color: $colorPrimary;
             }
         }
     }
 }
+.operation--button {
+    color: $colorLinks;
+    transition: all .3s ease-out;
+    font-weight: 700;
+    text-decoration: none;
+    z-index: 2000;
+    position: relative;
+    width: 100%;
+    text-align: center;
+    .fa-solid{
+        position: absolute;
+        left: 12.5%;
+        top: 50%;
+        transform: translateY(-50%);
+        transition: all .3 ease-out;
+        font-size: 1rem;
+        color: $indexIconColor;
+        @include tablettes-only{
+            font-size: 1.4rem;
+        }
+        @include desktop-only{
+            font-size: 1.6rem;
+        }
+    }
+   
+}
+.operation--button__number{
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    top:50%;
+    transform: translateY(-50%);
+    left: -10px;
+    border-radius: 50%;
+    background-color: $colorPrimary;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: $fontColorBtn;
+    font-size: .6rem;
+    @include tablettes-only{
+        width: 40px;
+        height: 40px;
+        font-size: .8rem;
+        left: -12.5px
+    }
+    @include desktop-only{
+        width: 60px;
+        height: 60px;
+        font-size: 1rem;
+        left: -15px;
+    }
+}
+
 #restaurants {
     padding: 6% 5% 6% 5%;
-    min-height: 1225px;
+    height: 1225px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     background-color: $backgroundColorDarker;
+    @include tablettes-only{
+        height: auto;
+    }
+    @include desktop-only{
+        height: auto;
+        padding: 6% 10% 6% 10%;
+    }
     .restaurants--title {
         font-size: $fontSizeTitle;
         padding: 15% 0 2% 0;
         @include tablettes-only{
             padding: 7.5% 0 2% 0;
             font-size: 1.5rem;
-            min-height: 0;
         }
         @include desktop-only{
             padding: 0 0 2% 0;
             font-size: 2rem;
             justify-content: flex-start;
-            min-height: 0;
         }
-    }
-    .restaurants--cards {
-        min-height: 1205px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: space-evenly;
-        @include desktop-only{
-            min-height: 0; 
-            flex-direction: row;
-            flex-wrap: wrap;
-            padding-bottom: 30px;
-        }
-    }
-    .restaurant--card a{
-        width: 335px;
-        height: 250px;
-        display: flex;
-        flex-direction: column;
-        margin: 1.5% 0;
-        position: relative;
-        border-radius: 30px;
-        box-shadow: $boxShadow;
-        transition: all .2s ease-out;
-        text-decoration: none;
-        color: $colorLinks;
-        &:hover{
-            box-shadow: $boxShadowHover;
-        }
-        .restaurant--card__img{
-            width: 100%;
-            min-width: 335px;
-            height: 68%;
-            border-radius: 15px 15px 0 0;
-            object-fit: cover;
-        }
-        .restaurant--card__content{
-            height: 32%;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            position: relative;
-            padding: 17px 0 17px 4%;
-            background-color: white;
-            border-radius: 0 0 15px 15px;
-            @include tablettes-only{
-                font-size: 1.5rem;
-            }
-            @include desktop-only{
-                font-size: 1.7rem;
-            }
-        }
-        h3{
-            margin: 0;
-        }
-        a{
-            text-decoration: none;
-            color: $colorLinks;
-        }
-        .restaurant--card__like, .addRestaurant--card__like{
-            position: absolute;
-            display: inline-block;
-            right: 7.5%;
-            top: 50%;
-            width: 20px;
-            height: 25px;
-            transform: translateY(-50%);
-            transition: all .4s ease-out;
-            cursor: pointer;
-            .fa-heart{
-                @include heart
-            }
-            @include tablettes-only{
-                width: 30px;
-                height: 35px;
-            }
-            @include  desktop-only{
-                width: 40px;
-                height: 45px;
-            }
-        }
-        .restaurant--card__new{
-            position: absolute;
-            width: 24%;
-            height: 12%;
-            right: 14px;
-            top: 14px;
-            border-radius: 5px;
-            background-color: $colorThrid;
-            color: $colorThridDarker;
-            font-weight: 700;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-        @include tablettes-only{
-            width: 435px;
-            height: 350px;
-        }
-        @include desktop-only{
-            width: 535px;
-            height: 450px;
-        }
-    }
-    @include desktop-only{
-        justify-content: flex-start;
-        min-height: 0;
     }
 }
+.restaurants--cards {
+    height: 1205px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    @include tablettes-only{
+        height: fit-content;
+        flex-direction: row;
+        flex-wrap: wrap;
+        padding-bottom: 30px;
+        justify-content: space-around;
+    }
+    @include desktop-only{
+        height: fit-content;
+        flex-direction: row;
+        flex-wrap: wrap;
+        padding-bottom: 30px;
+        justify-content: space-around;
+    }
+}
+
+.restaurant--card {
+    width: 335px;
+    height: 250px;
+    display: flex;
+    flex-direction: column;
+    margin: 1.5% 0;
+    position: relative;
+    border-radius: 30px;
+    box-shadow: $boxShadow;
+    transition: all .3s ease-out;
+    text-decoration: none;
+    color: $colorLinks;
+    &:hover{
+        box-shadow: $boxShadowHover;
+    }
+    @include tablettes-only{
+        width: calc(335px*1.2);
+        height: calc(250px*1.2);
+    }
+    @include desktop-only{
+        width: calc(335px*1.5);
+        height: calc(250px*1.5)
+    }
+    .restaurant--card__img{
+        width: 100%;
+        min-width: 335px;
+        height: 174px;
+        border-radius: 15px 15px 0 0;
+        object-fit: cover;
+        @include tablettes-only{
+            height: calc(174px*1.2)
+        }
+        @include desktop-only{
+            height: calc(174px*1.5)
+        }
+    }
+    .restaurant--card__content{
+        height: 77px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        position: relative;
+        padding: 17px 0 17px 4%;
+        background-color: white;
+        border-radius: 0 0 15px 15px;
+        @include tablettes-only{
+            font-size: 1.2rem;
+            height: calc(77px*1.2);
+        }
+        @include desktop-only{
+            font-size: 1.5rem;
+            height: calc(77px*1.5);
+        }
+    }
+    h3{
+        margin: 0;
+    }
+    a{
+        text-decoration: none;
+        color: $colorLinks;
+    }
+    .restaurant--card__like, .addRestaurant--card__like{
+        position: absolute;
+        display: inline-block;
+        right: 7.5%;
+        top: 50%;
+        width: 20px;
+        height: 25px;
+        transform: translateY(-50%);
+        transition: all .3s ease-out;
+        cursor: pointer;
+        .fa-heart{
+            @include heart
+        }
+        @include tablettes-only{
+            width: 30px;
+            height: 35px;
+        }
+        @include  desktop-only{
+            width: 40px;
+            height: 45px;
+        }
+    }
+    .restaurant--card__new{
+        position: absolute;
+        width: 24%;
+        height: 12%;
+        right: 14px;
+        top: 14px;
+        border-radius: 5px;
+        background-color: $colorThrid;
+        color: $colorThridDarker;
+        font-weight: 700;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+}
+
 @keyframes spine {
     0% {
         stroke-dasharray: 10 10;

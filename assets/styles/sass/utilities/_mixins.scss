@@ -36,7 +36,7 @@
 
 @mixin heart{
     transition-duration: .25s;
-    font-weight: 400;
+    font-size: 2rem;
         &:hover{
             font-weight: 900;
             background:linear-gradient(to bottom, #9356DC, #FF79DA);

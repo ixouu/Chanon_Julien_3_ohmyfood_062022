@@ -7,7 +7,7 @@
 .mainPicture{ 
     object-fit: contain;
     width: 100vw;
-    height: 375px;
+    height: 100vw;
     position: absolute;
     z-index: 1000;
     background-position: center;
@@ -16,44 +16,57 @@
         height: 80vh;
     }
     @include desktop-only{
-        height: 100vh;
+        height: 100%;
+    }
+}
+.mainPicture--aLaFrancaise,
+.mainPicture--laNoteEnchantee,
+.mainPicture--laPaletteDuGout,
+.mainPicture--leDelicedesSens{
+    background-size: 100vw auto;
+    background-position: top;
+    background-size: cover;
+    @include desktop-only{
+        background-position: -50%;
     }
 }
 
 .mainPicture--aLaFrancaise{
-    background-image: url(../../../assets/images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg);
-    background-size: 100vw auto;
-    background-position: top;
-    background-size: cover;
+    background-image: url(/assets/images/restaurants/small/toa-heftiba-small.jpg);
+    @include tablettes-only{
+        background-image: url(/assets/images/restaurants/medium/toa-heftiba-medium.jpg);
+    }
     @include desktop-only{
-        background-position: -50%;
+        background-image: url(/assets/images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg);
     }
 } 
 .mainPicture--laNoteEnchantee{
-    background-image: url(../../../assets/images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg);
-    background-position: bottom;
-    background-size: 100vw  auto;
-    background-size: cover;
+    background-image: url(/assets/images/restaurants/small/stil-small.jpg);
+    @include tablettes-only{
+        background-image: url(/assets/images/restaurants/medium/stil-medium.jpg);
+        background-position: 50% 20%;
+    }
     @include desktop-only{
-        background-position: -50%;
+        background-image: url(/assets/images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg);
     }
 }
 .mainPicture--laPaletteDuGout{
-    background-image: url(../../../assets/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg);
-    background-size: 100vw auto;
-    background-position: top;
-    background-size: cover;
+    background-image: url(/assets/images/restaurants/small/jay-wennington-small.jpg);
+    @include tablettes-only{
+        background-image: url(/assets/images/restaurants/medium/jay-wennington-medium.jpg);
+        background-position: bottom;
+    }
     @include desktop-only{
-        background-position: -50%;
+        background-image: url(/assets/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg);
     }
 }
 .mainPicture--leDelicedesSens{
-    background-image: url(../../../assets/images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg);
-    background-size: 100vw auto;
-    background-position: top;
-    background-size: cover;
+    background-image: url(/assets/images/restaurants/small/louis-hansel-small.jpg);
+    @include tablettes-only{
+        background-image: url(/assets/images/restaurants/medium/louis-hansel-medium.jpg);
+    }
     @include desktop-only{
-        background-position: -50%;
+        background-image: url(/assets/images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg);
     }
 }
 .mainContent{
@@ -67,15 +80,13 @@
     justify-content: space-evenly;
     @include tablettes-only{
         margin-top: 40vh;
-        padding: 30px 0 80px 0;
-        align-items: center;
-        justify-content: center;
+        padding: 30px 10% 80px 10%;
     }
     @include desktop-only{
         margin-top: 75vh;
-        padding: 30px 0 80px 0;
-        align-items: center;
-        justify-content: center;
+        padding: 30px 10% 80px 10%;
+        flex-wrap: wrap;
+        flex-direction: row;
     }
 }
 .mainContent--title{  
@@ -95,25 +106,35 @@
             margin-right: 60px;
         }
     }
-     h1{
-    font-family: $fontShrikhand;
-    font-size: 1.8rem;
-    letter-spacing: -0.7px;
+    h1{
+        font-family: $fontShrikhand;
+        font-size: 1.8rem;
+        letter-spacing: -0.7px;
+        @include tablettes-only{
+            font-size: 2.4rem;
+            letter-spacing: 0;
+        }
+        @include desktop-only{
+            font-size: 3rem;
+            letter-spacing: 0;
+        }
+    }
     @include tablettes-only{
-        font-size: 2.4rem;
-        padding-left: 25%;
-        letter-spacing: 0;
+        padding: 0 0 100px 0;
     }
     @include desktop-only{
-        font-size: 3rem;
-        padding-left: 25%;
-        letter-spacing: 0;
-    }
+        padding: 0 0 100px 0;
     }
 }
 
 .mainContent--starters, .mainContent--mains, .mainContent--desserts{
     margin: 0 0 24px 0;
+    @include tablettes-only{
+        width: 100%;
+    }
+    @include desktop-only{
+        width: 30%;
+    }
     h4{
     text-transform: uppercase;
     font-weight: 400;
@@ -133,6 +154,7 @@
     }
     @include tablettes-only{
         font-size: 1.2rem;
+        
     }
     @include desktop-only{
         font-size: 1.4rem;
@@ -141,6 +163,13 @@
 }
 .mainContent--starters{
     margin-top: 32px;
+    @include tablettes-only{
+        margin-top: 0;
+        
+    }
+    @include desktop-only{
+        margin-top: 0;
+    }
 }
 .mainContent--starters .course{
    @include coursesAnimation;
@@ -152,14 +181,6 @@
  .mainContent--desserts .course{
     @include coursesAnimation;
     animation-delay: .3s;
- }
- .mainContent--starters, .mainContent--mains, .mainContent--desserts {
-    @include tablettes-only{
-        width: 80vw;
-    }
-    @include desktop-only{
-        width: 60vw;
-    }
  }
 .course{
     width: 100%;
@@ -200,7 +221,7 @@
         flex-direction:column;
         justify-content: space-evenly;
         padding: 10px 0 10px 10px;
-        transition : .3s;
+        transition : all .3s ease-out;
         width: 80%;
         @include tablettes-only{
             justify-content: center;
@@ -270,11 +291,23 @@
     }
     .fa-circle-check{
         color: white;
-        width: 20px;
+        font-size: 1rem;
         opacity: 0;
+        @include tablettes-only{
+            font-size: 1.5rem;
+        }
+        @include desktop-only{
+            font-size: 2rem;
+        }
     }
     @include desktop-only{
         margin: 2vh 0;
+        max-width: 850px;
+        
+    }
+    @include desktop-only{
+        margin: 2vh 0;
+        max-width: 650px;
     }
 }
 .mainContent--button{
