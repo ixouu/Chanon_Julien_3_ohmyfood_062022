@@ -1,23 +1,85 @@
 .loader {
     animation: hide .3s ease-out forwards 1 $animationDelay;
     background-color: $backgroundColorDarker;
-    width: 100%;
+    width: 100vw;
     height: 100vh;
     position: fixed;
     display: flex;
     align-items: center;
     justify-content: center;
-    circle {
-        fill: none;
-        stroke: #9356dc;
-        stroke-width: 10px;
-        stroke-dasharray: 100 100;
-        stroke-dashoffset: 70;
-        animation: spine $animationDuration ease-in-out forwards 1 ;
+    .largeCircle{
+       width: 160px;
+       height: 160px;
+       border: solid 20px #9356DC;
+       border-top-color: #EEE; 
+       border-radius : 50%;
+       transform: rotate(0);
+       display: flex;
+       align-items: center;
+       justify-content: center;
+       animation: spinner 3s ease-in-out forwards 1;
+       opacity : 1;
+       @include tablettes-only{
+        width : 320px;
+        height: 320px;
+        border: solid 40px #9356DC;
+        border-left-color: #EEE; 
+       }
+       @include  desktop-only{
+        width : 320px;
+        height: 320px;
+        border: solid 40px #9356DC;
+        border-left-color: #EEE; 
+       }
     }
-    #spinner--svg {
-        filter: drop-shadow(50px 0 #ff79da);
+    .mediumCircle{
+        width : 115px;
+        height: 115px;
+        border: solid 20px #FF79DA;
+        border-bottom-color: #EEE; 
+        border-radius : 50%;
+        transform: rotate(0);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        animation: spinner 3s ease-in-out forwards 1;
+        opacity : 1;
+        @include tablettes-only{
+            width : 230px;
+            height: 230px;
+            border: solid 40px #FF79DA;
+            border-left-color: #EEE; 
+        }
+        @include  desktop-only{
+            width : 230px;
+            height: 230px;
+            border: solid 40px #FF79DA;
+            border-left-color: #EEE; 
+        }
     }
+    .smallCircle{
+        width : 50px;
+        height: 50px;
+        border: solid 15px #008766;
+        border-left-color: #EEE; 
+        border-radius : 50%;
+        transform: rotate(0);
+        display: flex;
+        animation: spinner 3s ease-in-out forwards 1;
+        opacity : 1;
+        @include tablettes-only{
+            width : 100px;
+            height: 100px;
+            border: solid 30px #008766;
+            border-left-color: #EEE; 
+        }
+        @include  desktop-only{
+            width : 100px;
+            height: 100px;
+            border: solid 30px #008766;
+            border-left-color: #EEE; 
+        }
+        }   
 }
 
 .indexContent {
@@ -28,92 +90,105 @@
 
 .location {
     height: 50px;
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
     background-color: $backgroundColor;
-    .location__icon{
-        @include tablettes-only{
-            width: 22px;
-            height: 22px;
-        };
-        @include desktop-only{
-            width: 26px;
-            height: 26px;
-        }
-    }
     .location--currentLocation {
-        padding: 0 28px 0 15px;
         font-weight: 700;
+        display: block;
+        text-align: center;
+        position: relative;
+        .fa-location-dot{
+            color: $colorLinks;
+            position: absolute;
+            padding-right: 15px;
+            left: -40px;
+            top: 50%;
+            transform: translateY(-50%);
+            @include tablettes-only{
+                left: -60px;
+            }
+            @include desktop-only{
+                left: -35%;
+            }
+        }
     }
     @include tablettes-only{
         height: 80px;
-        font-size: 1.2rem;
+        font-size: 1.1rem;
     }
     @include desktop-only{
         height: 100px;
-        font-size: 1.4rem;
+        font-size: 1.3rem;
+        padding: 0;
+        margin: 0;
     }
 }       
 .explore {
-    min-height: 280px;
+    height: 287px;
+    width: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
-    padding: 5% 8% 6% 8%;
+    padding: 32px 8% 0 8%;
     background-color: $backgroundColorDarker;
     h1 {
         font-size: $fontSizeTitle;
         text-align: center;
-        padding: 0 5% 3% 5%;
+        margin: 0 5.3% 20px 5.3%;
         @include tablettes-only{
             font-size: 1.7rem;
         }
         @include desktop-only{
             font-size: 2.2rem;
+            margin: 20px 5.3% 20px 5.3%;
         }
     }
     h2 {
         font-weight: 400;
         font-size: 1.1rem;
         text-align: center;
-        padding-bottom: 4%;
+        margin-bottom: 28px;
         @include tablettes-only{
             font-size: 1.2rem;
-            padding: 0 15vw 3% 15vw;
         }
         @include desktop-only{
             font-size: 1.4rem;
-            padding: 0 15vw 3% 15vw;
         }
     }
     .explore--button {
         @include mainButtons
     }
+    @include tablettes-only{
+        height: fit-content;
+        padding-bottom: 18px;
+        margin: 0
+    }
+    @include desktop-only{
+        height: fit-content;
+        padding-bottom: 32px;
+        margin: 0
+    }
 }
 .operation {
-    padding: 6% 5% 6% 5%;
+    padding: 44px 5.3% 44px 5.3%;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    @include desktop-only{
-        padding: 6% 10% 6% 10%;
-    }
+    justify-content: space-between;
+    height: 440px;
     .operation--title {
         font-size: $fontSizeTitle;
-        padding-top: 10%;
-        @include tablettes-only{
+        margin: 0;
+        @include tablettes-only{ 
             padding-top: 5%;
             font-size: 1.5rem;
         }
         @include desktop-only{
-            padding-top: 0;
+            padding-top: 5%;
             font-size: 2rem;
         }
-    }
-    @include tablettes-only{
-        justify-content: flex-start;
     }
     .operation--buttons {
         min-height: 320px;
@@ -121,34 +196,29 @@
         flex-direction: column;
         align-items: center;
         justify-content: space-evenly;
+        margin-top: 4px;
+        @include tablettes-only{
+            width: 100%;
+            height: fit-content;
+            justify-content: space-between;
+        }
         @include desktop-only{
             flex-direction: row;
-            flex-wrap: wrap;
+            width: 100%;
+            height: fit-content;
+            justify-content: space-between;
         }
     }
-    li{
-        width: 86.6%;
+    .operation--button{
+        width: 100%;
         height: 75px; 
         background-color: $backgroundColorDarker ;
-        border-radius: 50px;
+        border-radius: 30px;
         box-shadow: $boxShadow;
         display: flex;
         position: relative;
-        justify-content: center;
         align-items: center;
         transition: all .3s ease-out;
-        @include tablettes-only{
-            font-size: 1.2rem;
-            width: 390px;
-            height: 90px; 
-        }
-        @include desktop-only{
-            margin: 20px 0 20px 0;
-            font-size: 1.5rem;
-            width: 450px;
-            font-size: 1.5rem;
-            height: 100px; 
-        }
         &:hover{
             box-shadow: $boxShadowHover;
             background-color: $colorPrimaryLighter;
@@ -156,33 +226,54 @@
                 color: $colorPrimary;
             }
         }
+        @include tablettes-only{
+            margin: 15px;
+            width: 60%;
+            height: 90px; 
+        }
+        @include desktop-only{
+            margin: 15px;
+            width: 30%;
+            height: 100px; 
+        }
+    }
+    @include desktop-only{
+        width: 100%;
+        justify-content: flex-start;
+        margin: 0;
+        height: fit-content;
+    }
+    @include tablettes-only{
+        width: 100%;
+        justify-content: flex-start;
+        margin: 0;
+        height: fit-content;
     }
 }
-.operation--button {
+.operation--button__title{
     color: $colorLinks;
     transition: all .3s ease-out;
     font-weight: 700;
-    text-decoration: none;
-    z-index: 2000;
     position: relative;
     width: 100%;
-    text-align: center;
-    .fa-solid{
-        position: absolute;
-        left: 12.5%;
-        top: 50%;
-        transform: translateY(-50%);
-        font-size: 1rem;
-        color: $indexIconColor;
-        @include tablettes-only{
-            font-size: 1.4rem;
-            left: 50px;
-        }
-        @include desktop-only{
-            font-size: 1.6rem;
-        }
+    @include tablettes-only{
+        font-size: 1.1rem;
     }
-   
+    @include desktop-only{
+        font-size: 1.2rem;
+        padding-right: 5px;
+    }
+}
+.fa-solid{
+    font-size: 1rem;
+    color: $indexIconColor;
+    padding: 0 6% 0 15%;
+    @include tablettes-only{
+        font-size: 1.4rem;
+    }
+    @include desktop-only{
+        font-size: 1.6rem;
+    }
 }
 .operation--button__number{
     position: absolute;
@@ -205,39 +296,40 @@
         left: -12.5px
     }
     @include desktop-only{
-        width: 60px;
-        height: 60px;
+        width: 45px;
+        height: 45px;
         font-size: 1rem;
         left: -15px;
     }
 }
-
 #restaurants {
-    padding: 6% 5% 6% 5%;
+    padding: 0 5.3% 6% 5.3%;
     height: 1225px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     background-color: $backgroundColorDarker;
-    @include tablettes-only{
-        height: auto;
-    }
-    @include desktop-only{
-        height: auto;
-        padding: 6% 10% 6% 10%;
-    }
+    width: 100%;
     .restaurants--title {
         font-size: $fontSizeTitle;
-        padding: 15% 0 2% 0;
+        padding: 44px 0 0 0;
+        margin: 0;
         @include tablettes-only{
-            padding: 7.5% 0 2% 0;
             font-size: 1.5rem;
         }
         @include desktop-only{
-            padding: 0 0 2% 0;
             font-size: 2rem;
             justify-content: flex-start;
         }
+    }
+    @include tablettes-only{
+        height: fit-content;
+        padding: 6% 5.3% 6% 5.3%;
+        margin: 0;
+    }
+    @include desktop-only{
+        height: fit-content;
+        padding: 6% 5.3% 6% 5.3%;
+        margin: 0;
     }
 }
 .restaurants--cards {
@@ -263,7 +355,7 @@
 }
 
 .restaurant--card {
-    width: 335px;
+    width: 100%;
     height: 250px;
     display: flex;
     flex-direction: column;
@@ -278,24 +370,23 @@
         box-shadow: $boxShadowHover;
     }
     @include tablettes-only{
-        width: calc(335px*1.2);
-        height: calc(250px*1.2);
+        width: calc(335px*1.1);
+        height: calc(250px*1.1);
     }
     @include desktop-only{
-        width: calc(335px*1.5);
-        height: calc(250px*1.5)
+        width: calc(335px*1.2);
+        height: calc(250px*1.2)
     }
     .restaurant--card__img{
         width: 100%;
-        min-width: 335px;
         height: 174px;
         border-radius: 15px 15px 0 0;
         object-fit: cover;
         @include tablettes-only{
-            height: calc(174px*1.2)
+            height: calc(174px*1.1)
         }
         @include desktop-only{
-            height: calc(174px*1.5)
+            height: calc(174px*1.2)
         }
     }
     .restaurant--card__content{
@@ -309,15 +400,17 @@
         border-radius: 0 0 15px 15px;
         @include tablettes-only{
             font-size: 1.2rem;
-            height: calc(77px*1.2);
+            height: calc(77px*1.1);
         }
         @include desktop-only{
             font-size: 1.5rem;
-            height: calc(77px*1.5);
+            height: calc(77px*1.2);
         }
     }
-    h3{
+    h4{
         margin: 0;
+        font-weight: 900;
+        font-size: 1.1rem;
     }
     a{
         text-decoration: none;
@@ -359,37 +452,31 @@
         align-items: center;
         justify-content: center;
     }
-
 }
-
-@keyframes spine {
-    0% {
-        stroke-dasharray: 10 10;
-        stroke-dashoffset: 70;
-        transform: scale(1);
-        opacity: 1;
+@keyframes spinner{
+    0%{
+        transform: rotate(0);
+        opacity : 1;
     }
-    50% {
-        stroke: #ff79da;
-        transform: scale(0.9);
-        opacity: 1;
+    25%{
+        transform: rotate(70deg);
+        opacity : 1;
     }
-    60%{
-        opacity: 1;
+    50%{
+        transform: rotate(150deg);
+        opacity : 1;
     }
-    80%{
-        opacity: 0.75;
+    75%{
+        opacity : 1;
     }
-    100% {
-        stroke-dasharray: 20 20;
-        stroke-dashoffset: -200;
-        transform: scale(1);
-        opacity: 0;
+    100%{
+        transform: rotate(360deg);
+        opacity : 0;
     }
-}
+    }
 @keyframes show {
     100% {
-       transform: translate(0);
+        transform: translate(0);
     }
 }
 @keyframes hide {

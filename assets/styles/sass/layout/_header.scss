@@ -31,21 +31,23 @@ header{
             text-align: center;
         }
     }
-
-    .fa-arrow-left{
+    .header--arrow{
         position: absolute;
         left: 6.4%;
         top:50%;
         transform: translateY(-50%);
-        color: $colorLinks;
         transition: all .3s ease-out;
+        .fa-arrow-left{
+            color: $colorLinks;
+            @include tablettes-only{
+                font-size: 1.2rem;
+            }
+            @include desktop-only{
+                font-size: 1.5rem;
+            }
+        }
     }
-    @include tablettes-only{
-        font-size: 1.2rem;
-    }
-    @include desktop-only{
-        font-size: 1.5rem;
-    }
+
 }
 @keyframes backgroundRotate{
     from {
