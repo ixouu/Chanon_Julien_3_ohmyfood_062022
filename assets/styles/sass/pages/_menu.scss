@@ -1,22 +1,26 @@
-.wrapper--menu{
+.wrapper--menu {
     position: relative;
     height: fit-content;
     display: flex;
     flex-direction: column;
 }
-.mainPicture{
+
+.mainPicture {
     object-fit: contain;
     z-index: 1000;
     width: 100%;
     max-height: 32rem;
-    @include tablettes-only{
+
+    @include tablettes-only {
         object-fit: cover;
     }
-    @include desktop-only{
+
+    @include desktop-only {
         object-fit: cover;
     }
 }
-.mainContent{
+
+.mainContent {
     background-color: $backgroundColorDarker;
     padding: 30px 5.3% 84px 5.3%;
     border-radius: 40px 40px 0 0;
@@ -26,108 +30,129 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    @include tablettes-only{
+
+    @include tablettes-only {
         align-items: center;
     }
-    @include desktop-only{
+
+    @include desktop-only {
         flex-wrap: wrap;
         flex-direction: row;
         height: fit-content;
         justify-content: center;
     }
 }
-.mainContent--head{  
-    width: 100%;  
+
+.mainContent--head {
+    width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    .fa-heart{
+
+    .fa-heart {
         @include heart;
         margin-right: 25px;
 
-        @include tablettes-only{
+        @include tablettes-only {
             margin-right: 40px;
             width: 40px;
             height: 40px;
         }
-        @include desktop-only{
+
+        @include desktop-only {
             margin-right: 60px;
         }
     }
-    h1{
+
+    h1 {
         font-family: $fontShrikhand;
         font-size: 1.8rem;
         letter-spacing: -0.7px;
         position: relative;
         font-weight: 400;
         margin: 0;
-        }
-        @include tablettes-only{
-            font-size: 2.4rem;
-            letter-spacing: 0;
-        }
-        @include desktop-only{
-            font-size: 3rem;
-            letter-spacing: 0;
-            padding-left: 5%;
-        }
-    @include tablettes-only{
+    }
+
+    @include tablettes-only {
+        font-size: 2.4rem;
+        letter-spacing: 0;
+    }
+
+    @include desktop-only {
+        font-size: 3rem;
+        letter-spacing: 0;
+        padding-left: 5%;
+    }
+
+    @include tablettes-only {
         padding: 0 0 100px 0;
     }
-    @include desktop-only{
+
+    @include desktop-only {
         padding: 0 5.3% 100px 5.3%;
     }
 }
 
-section{
+section {
     display: flex;
     flex-direction: column;
-    .mainContent--subtitle{
+
+    .mainContent--subtitle {
         text-transform: uppercase;
         font-weight: 400;
         font-size: 1rem;
         margin: 0 0 16px 0;
         position: relative;
-        &::before{
+
+        &::before {
             content: '';
             height: 3px;
             width: 40px;
             background-color: $colorThrid;
             position: absolute;
             bottom: -8px;
-            @include tablettes-only{
+
+            @include tablettes-only {
                 width: 60px;
             }
         }
-        @include tablettes-only{
+
+        @include tablettes-only {
             font-size: 1.2rem;
-            
+
         }
-        @include desktop-only{
+
+        @include desktop-only {
             font-size: 1.4rem;
         }
     }
-    @include tablettes-only{
+
+    @include tablettes-only {
         width: 75%;
     }
-    @include desktop-only{
+
+    @include desktop-only {
         width: 30%;
         margin: 0 1rem 16px 1rem;
     }
 }
-.mainContent--starters .course{
-   @include coursesAnimation;
-   opacity: 0;
+
+.mainContent--starters .course {
+    @include coursesAnimation;
+    opacity: 0;
 }
-.mainContent--mains .course{
+
+.mainContent--mains .course {
     @include coursesAnimation;
     animation-delay: .2s;
- }
- .mainContent--desserts .course{
+}
+
+.mainContent--desserts .course {
     @include coursesAnimation;
     animation-delay: .3s;
- }
-.course{
+}
+
+.course {
     width: 100%;
     height: 68px;
     background-color: #FFFFFF;
@@ -136,81 +161,103 @@ section{
     border-radius: 15px;
     cursor: pointer;
     box-shadow: $boxShadow;
-    &:hover{
+
+    &:hover {
         box-shadow: $boxShadowHover;
     }
-    &:hover .fa-circle-check{
+
+    &:hover .fa-circle-check {
         animation: iconRotate .3s ease-out;
         opacity: 1;
     }
-    &:hover .course--added{
+
+    &:hover .course--added {
         width: 60px;
-        @include tablettes-only{
+
+        @include tablettes-only {
             width: 80px;
         }
-        @include desktop-only{
+
+        @include desktop-only {
             width: 100px;
         }
     }
+
     &:hover .course--details {
         width: 43%;
-        @include tablettes-only{
+
+        @include tablettes-only {
             width: 60%;
         }
-        @include desktop-only{
+
+        @include desktop-only {
             width: 60%;
         }
     }
-    .course--details{
+
+    .course--details {
         display: flex;
-        flex-direction:column;
+        flex-direction: column;
         justify-content: space-evenly;
         padding: 10px 0 10px 10px;
-        transition : all .3s ease-out;
+        transition: all .3s ease-out;
         width: 80%;
-        @include tablettes-only{
+
+        @include tablettes-only {
             justify-content: center;
             padding: 0 0 0 15px;
         }
-        @include desktop-only{
+
+        @include desktop-only {
             justify-content: center;
             padding: 0 0 0 25px;
         }
     }
-    .course--details__title, .course--details__subtitle{
+
+    .course--details__title,
+    .course--details__subtitle {
         overflow: hidden;
         white-space: nowrap;
         text-overflow: ellipsis;
     }
-    .title{
+
+    .title {
         font-weight: 700;
         font-size: 1.1rem;
-        @include tablettes-only{
+
+        @include tablettes-only {
             font-size: 1.3rem;
         }
-        @include desktop-only{
+
+        @include desktop-only {
             font-size: 1.3rem;
         }
     }
-    .subtitle{
+
+    .subtitle {
         font-size: .9rem;
-        @include tablettes-only{
+
+        @include tablettes-only {
             font-size: 1.1rem;
         }
-        @include desktop-only{
+
+        @include desktop-only {
             font-size: 1.1rem;
         }
     }
-    .course--price{
+
+    .course--price {
         margin-left: auto;
-        display:flex;
+        display: flex;
         align-items: flex-end;
     }
-    .price{
+
+    .price {
         padding: 0 20px 12px 0;
         font-weight: 700;
     }
-    .course--added{
+
+    .course--added {
         width: 0;
         height: 68px;
         border-radius: 0 15px 15px 0;
@@ -218,58 +265,70 @@ section{
         display: flex;
         align-items: center;
         justify-content: center;
-        transition : all .3s ease-out;
+        transition: all .3s ease-out;
     }
-    .fa-circle-check{
+
+    .fa-circle-check {
         color: white;
         font-size: 1rem;
         opacity: 0;
-        @include tablettes-only{
+
+        @include tablettes-only {
             font-size: 1.5rem;
         }
-        @include desktop-only{
+
+        @include desktop-only {
             font-size: 2rem;
         }
     }
 }
-.mainContent--button{
+
+.mainContent--button {
     // margin-top: 20px;
     display: flex;
     align-items: center;
     justify-content: center;
-    .button--order{
+
+    .button--order {
         @include mainButtons;
         width: 185px;
 
     }
-    @include desktop-only{
+
+    @include desktop-only {
         padding-top: 50px;
     }
 }
 
-@keyframes iconRotate{
-    0%{
+@keyframes iconRotate {
+    0% {
         transform: rotate(0);
     }
-    100%{
+
+    100% {
         transform: rotate(360deg);
     }
 }
-@keyframes showCourses{
-    0%{
+
+@keyframes showCourses {
+    0% {
         opacity: 0;
         transform: translateY(20px);
     }
-    50%{
+
+    50% {
         opacity: .5;
     }
-    70%{
+
+    70% {
         opacity: .7;
     }
-    90%{
+
+    90% {
         opacity: .9;
     }
-    100%{
+
+    100% {
         transform: translateY(0);
         opacity: 1;
     }

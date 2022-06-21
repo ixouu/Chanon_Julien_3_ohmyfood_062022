@@ -1,60 +1,70 @@
-@mixin mainButtons{
-    font-size: 1.1rem;
-    width: 220px;
-    height: 50px;
-    border: none;
-    border-radius: 50px;
-    background: linear-gradient(175deg, #FF79DA, #9356DC);
-    box-shadow: $boxShadow;
-    transition: all .2s ease-out;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: $fontColorBtn;
-    text-decoration: none;
-    &:hover{
-        box-shadow: $boxShadowHover;
-        filter:brightness(1.1);
-    }
-    @include tablettes-only{
-      width: calc(220px*1.1);
-      height: calc(50px*1.1);
-        font-size: 1.2rem;
-    }
-    @include desktop-only{
-        width: calc(220px*1.2);
-        height: calc(50px*1.2);
-        font-size: 1.3rem;
-    }
-}
-@mixin coursesAnimation{
-    height: auto;
-    animation: showCourses .7s ease-out forwards 1;
-    opacity: 0;
-    transform: translateY(20px);
+@mixin mainButtons {
+  font-size: 1.1rem;
+  width: 220px;
+  height: 50px;
+  border: none;
+  border-radius: 50px;
+  background: linear-gradient(175deg, #FF79DA, #9356DC);
+  box-shadow: $boxShadow;
+  transition: all .2s ease-out;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: $fontColorBtn;
+  text-decoration: none;
+
+  &:hover {
+    box-shadow: $boxShadowHover;
+    filter: brightness(1.1);
+  }
+
+  @include tablettes-only {
+    width: calc(220px*1.1);
+    height: calc(50px*1.1);
+    font-size: 1.2rem;
+  }
+
+  @include desktop-only {
+    width: calc(220px*1.2);
+    height: calc(50px*1.2);
+    font-size: 1.3rem;
+  }
 }
 
-@mixin heart{
-    transition-duration: .25s;
-    font-size: 2rem;
-        &:hover{
-            font-weight: 900;
-            background:linear-gradient(to bottom, #9356DC, #FF79DA);
-            color: transparent;
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-           cursor: pointer;
-        }
+@mixin coursesAnimation {
+  height: auto;
+  animation: showCourses .7s ease-out forwards 1;
+  opacity: 0;
+  transform: translateY(20px);
 }
+
+@mixin heart {
+  transition-duration: .25s;
+  font-size: 2rem;
+
+  &:hover {
+    font-weight: 900;
+    background: linear-gradient(to bottom, #9356DC, #FF79DA);
+    color: transparent;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    cursor: pointer;
+  }
+}
+
 //media querries
-@mixin tablettes-only { 
-    @media screen and (min-width: map-get($breakpoints, mobile)) and (max-width : map-get($breakpoints, desktop)) { 
-      @content 
-    } 
-  };
+@mixin tablettes-only {
+  @media screen and (min-width: map-get($breakpoints, mobile)) and (max-width : map-get($breakpoints, desktop)) {
+    @content
+  }
+}
 
-  @mixin desktop-only { 
-    @media screen and (min-width : map-get($breakpoints, desktop)) { 
-      @content 
-    } 
-  };
+;
+
+@mixin desktop-only {
+  @media screen and (min-width : map-get($breakpoints, desktop)) {
+    @content
+  }
+}
+
+;

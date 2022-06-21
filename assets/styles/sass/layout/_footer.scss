@@ -1,74 +1,90 @@
-footer{
+footer {
     width: 100%;
     min-height: 195px;
     background-color: $footerColor;
     padding: 0 5.3%;
     color: white;
-    .footer--title{
+
+    .footer--title {
         font-family: $fontShrikhand;
         display: block;
         padding: 25px 0;
         font-size: 1.2rem;
         margin: 0;
         text-decoration: none;
-        color : white;
-        @include tablettes-only{
+        color: white;
+
+        @include tablettes-only {
             font-size: 1.7rem;
             text-align: center;
         }
-        @include desktop-only{
+
+        @include desktop-only {
             font-size: 2.4rem;
             padding: 30px 10%;
             text-align: center;
         }
-    }   
-    .footer--section{
+    }
+
+    .footer--section {
         display: flex;
         justify-content: flex-start;
         align-items: flex-start;
         flex-direction: column;
         margin: 0;
         padding-bottom: 34px;
-        li{
-            padding:0 0 14px 0;
+
+        li {
+            padding: 0 0 14px 0;
             text-decoration: none;
             width: 100%;
-            a{
+
+            a {
                 color: white;
                 text-decoration: none;
                 position: relative;
             }
-            @include tablettes-only{
+
+            @include tablettes-only {
                 font-size: 1.1rem;
             }
-            @include desktop-only{
+
+            @include desktop-only {
                 font-size: 1.2rem;
             }
         }
-        li:nth-child(-n+2){
+
+        li:nth-child(-n+2) {
             padding-left: 20px;
-            @include tablettes-only{
+
+            @include tablettes-only {
                 padding-left: 40px;
             }
-            @include desktop-only{
+
+            @include desktop-only {
                 padding-left: 40px;
             }
-        }   
+        }
     }
-    .fa-handshake-angle{
+
+    .fa-handshake-angle {
         transform: rotate(-20deg);
     }
-    .fa-handshake-angle, .fa-utensils{
+
+    .fa-handshake-angle,
+    .fa-utensils {
         position: absolute;
         padding-right: 15px;
         left: -40px;
         top: 50%;
         transform: translateY(-50%);
         color: white;
-        @include tablettes-only{
+
+        @include tablettes-only {
             left: -60px;
         }
-        @include desktop-only{
+
+        @include desktop-only {
             left: -60px;
         }
     }
