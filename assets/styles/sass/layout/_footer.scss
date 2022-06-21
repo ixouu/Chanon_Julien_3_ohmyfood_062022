@@ -47,10 +47,12 @@ footer {
 
             @include tablettes-only {
                 font-size: 1.1rem;
+                text-align: center;
             }
 
             @include desktop-only {
                 font-size: 1.2rem;
+                text-align: center;
             }
         }
 
@@ -64,6 +66,14 @@ footer {
             @include desktop-only {
                 padding-left: 40px;
             }
+        }
+        @include tablettes-only {
+            flex-direction: row;
+            justify-content: space-between;
+        }
+        @include desktop-only {
+            flex-direction: row;
+            justify-content: space-between;
         }
     }
 
