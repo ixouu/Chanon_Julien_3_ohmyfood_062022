@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.html",
   "scripts": {
-    "sass": "sass --watch ./assets/styles/sass/main.scss:./assets/styles/css/style.css",
-    "prefix": "postcss ./assets/styles/css/style.css --use autoprefixer -d ./assets/styles/css/prefixed/"
+    "sass": "sass --watch .\\assets\\styles\\sass\\main.scss:.\\assets\\styles\\css\\style.css -w --style compressed",
+    "prefix": "postcss .\\assets\\styles\\css\\style.css --use autoprefixer -d .\\assets\\styles\\css\\prefixed\\"
   },
   "repository": {
     "type": "git",
@@ -13,7 +13,7 @@
   },
   "author": "",
   "license": "ISC",
-  "browserslist" : ["Firefox","Chrome"],
+  "browserslist" : "last 4 versions",
   "bugs": {
     "url": "https://github.com/ixouu/Chanon_Julien_3_ohmyfood_062022/issues"
   },
