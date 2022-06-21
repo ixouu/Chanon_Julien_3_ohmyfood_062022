@@ -123,15 +123,16 @@ header .fa-arrow-left {
   top: 50%;
   transform: translateY(-50%);
   color: #000000;
+  transition: all 0.3s ease-out;
 }
 @media screen and (min-width: 599px) and (max-width: 1200px) {
   header {
-    height: 80px;
+    font-size: 1.2rem;
   }
 }
 @media screen and (min-width: 1200px) {
   header {
-    height: 100px;
+    font-size: 1.5rem;
   }
 }
 
@@ -177,14 +178,6 @@ header .fa-arrow-left {
   background-size: 100vw auto;
   background-position: top;
   background-size: cover;
-}
-@media screen and (min-width: 1200px) {
-  .mainPicture--aLaFrancaise,
-.mainPicture--laNoteEnchantee,
-.mainPicture--laPaletteDuGout,
-.mainPicture--leDelicedesSens {
-    background-position: -50%;
-  }
 }
 
 .mainPicture--aLaFrancaise {
@@ -264,7 +257,7 @@ header .fa-arrow-left {
 @media screen and (min-width: 1200px) {
   .mainContent {
     margin-top: 75vh;
-    padding: 30px 10% 80px 10%;
+    padding: 30px 5% 80px 5%;
     flex-wrap: wrap;
     flex-direction: row;
   }
@@ -280,6 +273,7 @@ header .fa-arrow-left {
   transition-duration: 0.25s;
   font-size: 2rem;
   margin-right: 25px;
+  font-weight: 300;
 }
 .mainContent--title .fa-heart:hover {
   font-weight: 900;
@@ -305,6 +299,30 @@ header .fa-arrow-left {
   font-family: "Shrikhand", sans-serif;
   font-size: 1.8rem;
   letter-spacing: -0.7px;
+  position: relative;
+}
+.mainContent--title h1:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 3px;
+  background: linear-gradient(to right, #9356DC, #FF79DA);
+  transition: all 0.5s ease-out;
+}
+@media screen and (min-width: 1200px) {
+  .mainContent--title h1:after {
+    left: 15%;
+  }
+}
+.mainContent--title h1:hover:after {
+  width: 100%;
+}
+@media screen and (min-width: 1200px) {
+  .mainContent--title h1:hover:after {
+    width: 85%;
+  }
 }
 @media screen and (min-width: 599px) and (max-width: 1200px) {
   .mainContent--title h1 {
@@ -316,6 +334,7 @@ header .fa-arrow-left {
   .mainContent--title h1 {
     font-size: 3rem;
     letter-spacing: 0;
+    padding-left: 5%;
   }
 }
 @media screen and (min-width: 599px) and (max-width: 1200px) {
@@ -355,7 +374,7 @@ header .fa-arrow-left {
   width: 40px;
   background-color: #99E2D0;
   position: absolute;
-  bottom: -7px;
+  bottom: -8px;
 }
 @media screen and (min-width: 599px) and (max-width: 1200px) {
   .mainContent--starters h4::before, .mainContent--mains h4::before, .mainContent--desserts h4::before {
@@ -445,12 +464,12 @@ header .fa-arrow-left {
 }
 @media screen and (min-width: 599px) and (max-width: 1200px) {
   .course:hover .course--details {
-    width: 80%;
+    width: 60%;
   }
 }
 @media screen and (min-width: 1200px) {
   .course:hover .course--details {
-    width: 80%;
+    width: 60%;
   }
 }
 .course .course--details {
@@ -564,13 +583,7 @@ header .fa-arrow-left {
 @media screen and (min-width: 1200px) {
   .course {
     margin: 2vh 0;
-    max-width: 850px;
-  }
-}
-@media screen and (min-width: 1200px) {
-  .course {
-    margin: 2vh 0;
-    max-width: 650px;
+    width: 500px;
   }
 }
 
@@ -824,10 +837,11 @@ header .fa-arrow-left {
 @media screen and (min-width: 1200px) {
   .operation .operation--buttons {
     flex-direction: row;
+    flex-wrap: wrap;
   }
 }
 .operation li {
-  width: 325px;
+  width: 86.6%;
   height: 75px;
   background-color: #F6F6F6;
   border-radius: 50px;
@@ -841,7 +855,7 @@ header .fa-arrow-left {
 @media screen and (min-width: 599px) and (max-width: 1200px) {
   .operation li {
     font-size: 1.2rem;
-    min-width: 440px;
+    width: 390px;
     height: 90px;
   }
 }
@@ -849,8 +863,7 @@ header .fa-arrow-left {
   .operation li {
     margin: 20px 0 20px 0;
     font-size: 1.5rem;
-    width: 30%;
-    min-width: 440px;
+    width: 450px;
     font-size: 1.5rem;
     height: 100px;
   }
@@ -878,13 +891,13 @@ header .fa-arrow-left {
   left: 12.5%;
   top: 50%;
   transform: translateY(-50%);
-  transition: all 0.3 ease-out;
   font-size: 1rem;
   color: #7e7e7e;
 }
 @media screen and (min-width: 599px) and (max-width: 1200px) {
   .operation--button .fa-solid {
     font-size: 1.4rem;
+    left: 50px;
   }
 }
 @media screen and (min-width: 1200px) {
@@ -993,7 +1006,7 @@ header .fa-arrow-left {
   height: 250px;
   display: flex;
   flex-direction: column;
-  margin: 1.5% 0;
+  margin: 9px 0;
   position: relative;
   border-radius: 30px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);

@@ -26,9 +26,6 @@
     background-size: 100vw auto;
     background-position: top;
     background-size: cover;
-    @include desktop-only{
-        background-position: -50%;
-    }
 }
 
 .mainPicture--aLaFrancaise{
@@ -84,7 +81,7 @@
     }
     @include desktop-only{
         margin-top: 75vh;
-        padding: 30px 10% 80px 10%;
+        padding: 30px 5% 80px 5%;
         flex-wrap: wrap;
         flex-direction: row;
     }
@@ -97,6 +94,7 @@
     .fa-heart{
         @include heart;
         margin-right: 25px;
+        font-weight: 300;
         @include tablettes-only{
             margin-right: 40px;
             width: 40px;
@@ -110,6 +108,26 @@
         font-family: $fontShrikhand;
         font-size: 1.8rem;
         letter-spacing: -0.7px;
+        position: relative;
+        &:after{
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width:0;
+            height: 3px;
+            background: linear-gradient(to right, $colorPrimary, $colorSecondary);
+            transition: all .5s ease-out;
+            @include desktop-only{
+                left: 15%;
+            }
+        }
+        &:hover:after{
+            width: 100%;
+            @include desktop-only{
+                width: 85%;
+            }
+        }
         @include tablettes-only{
             font-size: 2.4rem;
             letter-spacing: 0;
@@ -117,6 +135,7 @@
         @include desktop-only{
             font-size: 3rem;
             letter-spacing: 0;
+            padding-left: 5%;
         }
     }
     @include tablettes-only{
@@ -147,7 +166,7 @@
         width: 40px;
         background-color: $colorThrid;
         position: absolute;
-        bottom: -7px;
+        bottom: -8px;
         @include tablettes-only{
             width: 60px;
         }
@@ -210,10 +229,10 @@
     &:hover .course--details {
         width: 43%;
         @include tablettes-only{
-            width: 80%;
+            width: 60%;
         }
         @include desktop-only{
-            width: 80%;
+            width: 60%;
         }
     }
     .course--details{
@@ -302,12 +321,7 @@
     }
     @include desktop-only{
         margin: 2vh 0;
-        max-width: 850px;
-        
-    }
-    @include desktop-only{
-        margin: 2vh 0;
-        max-width: 650px;
+        width: 500px;
     }
 }
 .mainContent--button{
