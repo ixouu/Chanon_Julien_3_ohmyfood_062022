@@ -118,6 +118,16 @@ header {
   justify-content: center;
   position: relative;
 }
+@media screen and (min-width: 599px) and (max-width: 1200px) {
+  header {
+    height: 100px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  header {
+    height: 120px;
+  }
+}
 header .header--title {
   animation: backgroundRotate 20s infinite linear;
   background-image: linear-gradient(175deg, #9356DC, #FF79DA);
@@ -488,6 +498,11 @@ section .mainContent--subtitle::before {
     font-size: 2rem;
   }
 }
+@media screen and (min-width: 1200px) {
+  .course {
+    max-width: 500px;
+  }
+}
 
 .mainContent--button {
   display: flex;
@@ -812,13 +827,13 @@ section .mainContent--subtitle::before {
 }
 @media screen and (min-width: 599px) and (max-width: 1200px) {
   .operation .operation--title {
-    padding-top: 5%;
+    padding-top: 20px;
     font-size: 1.5rem;
   }
 }
 @media screen and (min-width: 1200px) {
   .operation .operation--title {
-    padding-top: 5%;
+    padding-top: 20px;
     font-size: 2rem;
   }
 }
@@ -841,6 +856,7 @@ section .mainContent--subtitle::before {
   .operation .operation--buttons {
     flex-direction: row;
     width: 100%;
+    padding: 0 15%;
     height: fit-content;
     justify-content: space-between;
   }
@@ -873,7 +889,7 @@ section .mainContent--subtitle::before {
 @media screen and (min-width: 1200px) {
   .operation .operation--button {
     margin: 15px;
-    width: 30%;
+    width: 450px;
     height: 100px;
   }
 }
@@ -984,19 +1000,20 @@ section .mainContent--subtitle::before {
   #restaurants .restaurants--title {
     font-size: 2rem;
     justify-content: flex-start;
+    padding: 44px 0 44px 0;
   }
 }
 @media screen and (min-width: 599px) and (max-width: 1200px) {
   #restaurants {
     height: fit-content;
-    padding: 6% 5.3% 6% 5.3%;
+    padding: 44px 5.3% 44px 5.3%;
     margin: 0;
   }
 }
 @media screen and (min-width: 1200px) {
   #restaurants {
     height: fit-content;
-    padding: 6% 5.3% 6% 5.3%;
+    padding: 44px 5.3% 44px 5.3%;
     margin: 0;
   }
 }
@@ -1097,6 +1114,16 @@ section .mainContent--subtitle::before {
   margin: 0;
   font-weight: 900;
   font-size: 1.1rem;
+}
+@media screen and (min-width: 599px) and (max-width: 1200px) {
+  .restaurant--card h4 {
+    font-size: 1.3rem;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .restaurant--card h4 {
+    font-size: 1.6rem;
+  }
 }
 .restaurant--card a {
   text-decoration: none;

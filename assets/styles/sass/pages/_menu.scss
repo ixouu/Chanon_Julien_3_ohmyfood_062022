@@ -281,6 +281,9 @@ section {
             font-size: 2rem;
         }
     }
+    @include desktop-only{
+        max-width: 500px;
+    }
 }
 
 .mainContent--button {
