@@ -47,6 +47,9 @@ footer .footer--section li a {
   text-decoration: none;
   position: relative;
 }
+footer .footer--section li a:hover {
+  color: #9356DC;
+}
 @media screen and (min-width: 599px) and (max-width: 1200px) {
   footer .footer--section li {
     font-size: 1.1rem;
@@ -538,8 +541,8 @@ section .mainContent--subtitle::before {
 }
 @media screen and (min-width: 1200px) {
   .mainContent--button .button--order {
-    width: 264px;
-    height: 60px;
+    width: 286px;
+    height: 65px;
     font-size: 1.3rem;
   }
 }
@@ -794,8 +797,8 @@ section .mainContent--subtitle::before {
 }
 @media screen and (min-width: 1200px) {
   .explore .explore--button {
-    width: 264px;
-    height: 60px;
+    width: 286px;
+    height: 65px;
     font-size: 1.3rem;
   }
 }

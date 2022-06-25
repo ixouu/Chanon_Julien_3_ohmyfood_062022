@@ -43,6 +43,9 @@ footer {
                 color: white;
                 text-decoration: none;
                 position: relative;
+                &:hover{
+                    color: $colorPrimary;
+                }
             }
 
             @include tablettes-only {
@@ -89,7 +92,6 @@ footer {
         top: 50%;
         transform: translateY(-50%);
         color: white;
-
         @include tablettes-only {
             left: -60px;
         }
