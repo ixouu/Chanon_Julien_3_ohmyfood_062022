@@ -48,11 +48,30 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    @include tablettes-only {
+        padding: 5.3% 0 100px 5.3%;
+    }
+    @include desktop-only {
+        padding: 0 5.3% 100px 5.3%;
+    }
+    h1 {
+        font-family: $fontShrikhand;
+        font-size: 1.8rem;
+        letter-spacing: -0.7px;
+        position: relative;
+        font-weight: 400;
+        margin: 0;
+        @include tablettes-only{
+            font-size: 2.5rem
+        }
+        @include desktop-only{
+            font-size: 3rem
+        }
 
+    }
     .fa-heart {
         @include heart;
         margin-right: 25px;
-
         @include tablettes-only {
             margin-right: 40px;
             width: 40px;
@@ -62,34 +81,6 @@
         @include desktop-only {
             margin-right: 60px;
         }
-    }
-
-    h1 {
-        font-family: $fontShrikhand;
-        font-size: 1.8rem;
-        letter-spacing: -0.7px;
-        position: relative;
-        font-weight: 400;
-        margin: 0;
-    }
-
-    @include tablettes-only {
-        font-size: 2.4rem;
-        letter-spacing: 0;
-    }
-
-    @include desktop-only {
-        font-size: 3rem;
-        letter-spacing: 0;
-        padding-left: 5%;
-    }
-
-    @include tablettes-only {
-        padding: 0 0 100px 0;
-    }
-
-    @include desktop-only {
-        padding: 0 5.3% 100px 5.3%;
     }
 }
 
@@ -262,9 +253,7 @@ section {
         height: 68px;
         border-radius: 0 15px 15px 0;
         background-color: $colorThrid;
-        display: flex;
-        align-items: center;
-        justify-content: center;
+        position: relative;
         transition: all .3s ease-out;
     }
 
@@ -272,13 +261,16 @@ section {
         color: white;
         font-size: 1rem;
         opacity: 0;
-
-        @include tablettes-only {
-            font-size: 1.5rem;
+        position: absolute;
+        left: 20%;
+        top: 50%;
+        @include tablettes-only{
+            font-size: 1.8rem;
+            left: 30%;
         }
-
-        @include desktop-only {
+        @include desktop-only{
             font-size: 2rem;
+            left: 35%;
         }
     }
     @include desktop-only{
@@ -287,7 +279,6 @@ section {
 }
 
 .mainContent--button {
-    // margin-top: 20px;
     display: flex;
     align-items: center;
     justify-content: center;

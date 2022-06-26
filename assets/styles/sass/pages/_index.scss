@@ -1,8 +1,8 @@
 .loader {
     animation: hide .3s ease-out forwards 1 $animationDelay;
     background-color: $backgroundColorDarker;
-    width: 100vw;
-    height: 100vh;
+    width: 100%;
+    height: 100%;
     position: fixed;
     display: flex;
     align-items: center;
@@ -225,21 +225,20 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        justify-content: space-evenly;
+        justify-content: space-between;
         margin-top: 4px;
 
         @include tablettes-only {
             width: 100%;
             height: fit-content;
-            justify-content: space-between;
         }
 
         @include desktop-only {
             flex-direction: row;
             width: 100%;
-            padding: 0 15%;
+            padding: 0 10%;
             height: fit-content;
-            justify-content: space-between;
+            flex-wrap: wrap;
         }
     }
 
@@ -253,6 +252,7 @@
         position: relative;
         align-items: center;
         transition: all .3s ease-out;
+        max-width: 375px;
 
         &:hover {
             box-shadow: $boxShadowHover;
@@ -265,13 +265,13 @@
 
         @include tablettes-only {
             margin: 15px;
-            width: 60%;
+            width: 500px;
             height: 90px;
         }
 
         @include desktop-only {
             margin: 15px;
-            width: 450px;
+            width: 500px;
             height: 100px;
         }
     }
@@ -295,16 +295,27 @@
     color: $colorLinks;
     transition: all .3s ease-out;
     font-weight: 700;
-    position: relative;
     width: 100%;
 
     @include tablettes-only {
         font-size: 1.1rem;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: auto;
+        white-space: nowrap;
     }
 
     @include desktop-only {
         font-size: 1.2rem;
         padding-right: 5px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: auto;
+        white-space: nowrap;
     }
 }
 
@@ -315,13 +326,37 @@
 
     @include tablettes-only {
         font-size: 1.4rem;
+        left: -20%;
+        top: 50%;
+        transform: translateY(-50%);
+        position: absolute;
+        padding: 0;
     }
 
     @include desktop-only {
         font-size: 1.6rem;
+        left: -20%;
+        top: 50%;
+        transform: translateY(-50%);
+        position: absolute;
+        padding: 0;
     }
 }
-
+.fa-list-ul{
+    @include tablettes-only {
+        left : -28%;
+    }
+}
+.fa-store{
+    @include tablettes-only {
+        left : -26%;
+    } 
+}
+.fa-mobile{
+    @include desktop-only{
+        left: -16%;
+    }
+}
 .operation--button__number {
     position: absolute;
     width: 25px;
@@ -402,7 +437,7 @@
         flex-direction: row;
         flex-wrap: wrap;
         padding-bottom: 30px;
-        justify-content: space-around;
+        // justify-content: space-around;
     }
 
     @include desktop-only {
@@ -410,7 +445,7 @@
         flex-direction: row;
         flex-wrap: wrap;
         padding-bottom: 30px;
-        justify-content: space-around;
+        // justify-content: flex-start;
     }
 }
 
@@ -432,13 +467,12 @@
     }
 
     @include tablettes-only {
-        width: calc(335px*1.1);
         height: calc(250px*1.1);
     }
 
     @include desktop-only {
-        width: calc(335px*1.2);
-        height: calc(250px*1.2)
+        max-width: 550px;
+        height: calc(250px*1.2);
     }
 
     .restaurant--card__img {
@@ -452,7 +486,7 @@
         }
 
         @include desktop-only {
-            height: calc(174px*1.2)
+            height: calc(174px*1.2); 
         }
     }
 
@@ -534,6 +568,12 @@
         display: flex;
         align-items: center;
         justify-content: center;
+        @include tablettes-only{
+            max-width: 120px;
+        }
+        @include desktop-only{
+            max-width: 140px;
+        }
     }
 }
 
